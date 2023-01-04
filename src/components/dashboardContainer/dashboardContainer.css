@@ -1,0 +1,11 @@
+.dashboard-help-container {
+  width: 49%;
+  padding: 24px 0px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.dashboard-help-wrapper {
+  width: 91%;
+  margin: 0px auto;
+}

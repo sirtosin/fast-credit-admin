@@ -1,0 +1,15 @@
+.login-container {
+  width: 100%;
+  background: #02bb5b;
+  background-image: url("../../assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+}
+
+.login-cont {
+  width: 50%;
+  max-width: 720px;
+  margin: 0px auto;
+  padding: 100px 0px;
+}

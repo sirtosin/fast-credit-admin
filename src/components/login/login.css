@@ -1,0 +1,150 @@
+.login-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.login-single {
+  width: 78%;
+  max-width: 560px;
+  margin: 0px auto;
+  padding: 56px 0px;
+}
+
+.login-single > img {
+  margin: 0px auto;
+  display: block;
+}
+
+.login-single h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 39px;
+  line-height: 120%;
+  margin: 64px 0px 16px;
+  text-align: center;
+  color: #1c1d21;
+}
+
+.login-single > p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: #98989a;
+}
+
+.login-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 64px;
+}
+
+.login-head h3 {
+  width: 50%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 120%;
+  text-align: center;
+  color: #4c4d50;
+  cursor: pointer;
+  padding-bottom: 16px;
+}
+
+.login-head .login-active {
+  color: #029247;
+  border-bottom: 2px solid #029247;
+}
+
+.login-group {
+  margin-top: 32px;
+}
+
+.login-group label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  display: block;
+  margin-bottom: 16px;
+  color: #1c1d21;
+}
+
+.login-group span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  margin-left: 4px;
+  color: #98989a;
+}
+
+.login-number {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background: #f6f6f6;
+  padding: 16px 0px;
+}
+
+.login-number div {
+  width: 20%;
+  border-right: 1px solid #d6d3d3;
+}
+
+.login-number div img {
+  display: block;
+  margin: 0px auto;
+}
+
+.login-number input,
+.login-password input {
+  width: 75%;
+  border: none;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #bababb;
+  padding: 0px 24px;
+}
+
+.login-number input:focus,
+.login-password input:focus {
+  outline: none;
+  border: none;
+}
+
+.login-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #f6f6f6;
+  /* padding: 16px 24px; */
+}
+
+.login-password img {
+  padding: 16px;
+  cursor: pointer;
+  background: #e9e9e9;
+}
+
+.forgot-p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: right;
+  color: #029247;
+  margin-top: 16px;
+}
+
+.login-button {
+  margin-top: 48px;
+}

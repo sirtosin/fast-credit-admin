@@ -1,0 +1,76 @@
+.dashboard-single-container {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 0px 24px;
+}
+
+.dashboard-single-single {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.dashboard-single-head {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-single-head div {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2ca466;
+}
+
+.dashboard-single-head h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  margin-left: 8px;
+  color: #2ca466;
+}
+
+.dashboard-single-body {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.dashboard-single-body h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #1c1d21;
+}
+
+.dashboard-single-body div {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.gain p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 120%;
+  margin-left: 4px;
+  letter-spacing: -0.05em;
+  color: #34c759;
+}
+
+.loss p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 120%;
+  margin-left: 4px;
+  letter-spacing: -0.05em;
+  color: #ff3b30;
+}

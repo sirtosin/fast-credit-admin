@@ -1,0 +1,14 @@
+.first-section {
+  width: 49%;
+}
+
+.first-section-single {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+}
+
+.top-section {
+  width: 48%;
+}

@@ -1,0 +1,14 @@
+.dashboard-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.second-section {
+  width: 49%;
+}
+
+.second-section img {
+  margin-top: 16px;
+}

@@ -1,0 +1,35 @@
+.layout-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.layout-cont {
+  flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  background: #f6f6f6;
+  /* padding: 16px 32px; */
+}
+
+.layout-cont::-webkit-scrollbar {
+  display: none;
+}
+
+.layout-body {
+  width: 95%;
+  margin: 32px auto;
+}
+
+.layout-body .date {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #4c4d50;
+}
+
+.date span {
+  color: #029247;
+}
