@@ -7,6 +7,9 @@ import Vas from "../components/svgComponents/vas/vas";
 import Bnpl from "../components/svgComponents/bnpl/bnpl";
 import Card from "../components/svgComponents/card/card";
 import Help from "../components/svgComponents/help/help";
+
+let admin = localStorage.getItem("Admin");
+
 export const SidebarData = [
   {
     title: "Overview",
@@ -16,10 +19,7 @@ export const SidebarData = [
         title: "Manage",
         icon: <Manage />,
         link: "/manage",
-        subNav: [
-          { title: "Admin", link: "/manage/admin" },
-          { title: "Customer", link: "/manage/customer" },
-        ],
+        subNav: [admin === "Super Admin" ? { title: "Admin", link: "/manage/admin" } : "", { title: "Customer", link: "/manage/customer" }],
       },
     ],
   },

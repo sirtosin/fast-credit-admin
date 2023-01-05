@@ -84,8 +84,10 @@ const LoginComponent = () => {
               color="white"
               action={() => {
                 if (user === "admin") {
+                  window.localStorage.setItem("Admin", "Admin");
                   navigate("/dashboard");
                 } else if (user === "super admin") {
+                  window.localStorage.setItem("Admin", "Super Admin");
                   navigate("/dashboard");
                 }
               }}

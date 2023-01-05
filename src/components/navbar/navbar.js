@@ -4,7 +4,7 @@ import User from "../../assets/user.png";
 import Search from "../../assets/search.svg";
 import Notification from "../../assets/notification.svg";
 
-const Navbar = () => {
+const Navbar = ({ admin }) => {
   const [search, setSearch] = useState("");
   return (
     <div className="navbar-container">
@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="user-img">
-          <h4>Super Admin</h4>
+          <h4> {admin === "Super Admin" ? "Super Admin" : "Admin"} </h4>
           <div>
             <img src={User} alt="user" />
           </div>
