@@ -87,6 +87,8 @@ const Sidebar = ({ admin }) => {
                               } else {
                                 return null;
                               }
+                            } else {
+                              return null;
                             }
                           })
                         : null}
