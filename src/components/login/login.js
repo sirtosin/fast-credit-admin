@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import "./login.css";
 import Logo from "../../assets/logo.png";
 import Flag from "../../assets/flag.svg";
-import Eye from "../../assets/eye.svg";
-import ClosedEye from "../../assets/closedEye.svg";
 import Button from "../button/button";
 import { useNavigate } from "react-router-dom";
+import PasswordInput from "../passwordInput/passwordInput";
 
 const LoginComponent = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState("admin");
-  const [show, setShow] = useState(false);
   const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -55,27 +53,8 @@ const LoginComponent = () => {
               />
             </div>
           </div>
-          <div className="login-group">
-            <label>Password</label>
-            <div className="login-password">
-              <input
-                type={show ? "text" : show === false ? "password" : null}
-                placeholder="Enter your password"
-                value={password}
-                required
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
-              <img
-                src={show ? ClosedEye : show === false ? Eye : null}
-                alt="eye"
-                onClick={() => {
-                  setShow(!show);
-                }}
-              />
-            </div>
-          </div>
+          <PasswordInput password={password} setPassword={setPassword} label="Password" placeholder="Enter your password" />
+
           <p className="forgot-p">Forgot Password?</p>
           <div className="login-button">
             <Button

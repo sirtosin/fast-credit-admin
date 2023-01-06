@@ -8,7 +8,7 @@ import WalletDetails from "../walletDetails/walletDetails";
 import ManageWallet from "../manageWallet/manageWallet";
 import RecentTransaction from "../recentTransactions/recentTransactions";
 
-const UserWallet = ({ action }) => {
+const UserWallet = ({ action, buttonAction }) => {
   return (
     <Layout text="Back to Wallet" action={action}>
       <div className="user-wallet-container">
@@ -25,7 +25,7 @@ const UserWallet = ({ action }) => {
       <div className="user-wallet-container">
         <WalletDetails />
         <div className="user-wallet-wrappers">
-          <ManageWallet />
+          <ManageWallet action={buttonAction} />
           <RecentTransaction />
         </div>
       </div>
