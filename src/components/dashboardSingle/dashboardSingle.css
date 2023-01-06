@@ -2,7 +2,7 @@
   width: 100%;
   background: #ffffff;
   border-radius: 16px;
-  padding: 20px 0px 24px;
+  padding: 24px 0px;
 }
 
 .dashboard-single-single {
@@ -37,7 +37,7 @@
 .dashboard-single-body {
   display: flex;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
 .dashboard-single-body h2 {

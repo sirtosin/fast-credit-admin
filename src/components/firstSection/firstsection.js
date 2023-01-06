@@ -12,26 +12,26 @@ const FirstSection = () => {
     <div className="first-section">
       <div className="first-section-single">
         <div className="top-section">
-          <DashboardSingle title="Wallets" img={Wallet} amount="2,038,000" profit="gain" profitAmount="2.6%" />
+          <DashboardSingle page="dashboard" title="Wallets" img={Wallet} amount="2,038,000" profit="gain" profitAmount="2.6%" />
         </div>
         <div className="top-section">
-          <DashboardSingle title="Loans" img={Wallet} amount="2,038,000" profit="gain" profitAmount="2.6%" />
-        </div>
-      </div>
-      <div className="first-section-single">
-        <div className="top-section">
-          <DashboardSingle title="Investments" img={Investments} amount="2,038,000" profit="loss" profitAmount="2.6%" />
-        </div>
-        <div className="top-section">
-          <DashboardSingle title="VAS" img={Vas} amount="2,038,000" profit="gain" profitAmount="2.6%" />
+          <DashboardSingle page="dashboard" title="Loans" img={Wallet} amount="2,038,000" profit="gain" profitAmount="2.6%" />
         </div>
       </div>
       <div className="first-section-single">
         <div className="top-section">
-          <DashboardSingle title="Buy Now Pay later" img={Bnpl} amount="2,038,000" profit="gain" profitAmount="2.6%" />
+          <DashboardSingle page="dashboard" title="Investments" img={Investments} amount="2,038,000" profit="loss" profitAmount="2.6%" />
         </div>
         <div className="top-section">
-          <DashboardSingle title="Cards" img={Card} amount="2,038,000" profit="loss" profitAmount="2.6%" />
+          <DashboardSingle page="dashboard" title="VAS" img={Vas} amount="2,038,000" profit="gain" profitAmount="2.6%" />
+        </div>
+      </div>
+      <div className="first-section-single">
+        <div className="top-section">
+          <DashboardSingle page="dashboard" title="Buy Now Pay later" img={Bnpl} amount="2,038,000" profit="gain" profitAmount="2.6%" />
+        </div>
+        <div className="top-section">
+          <DashboardSingle page="dashboard" title="Cards" img={Card} amount="2,038,000" profit="loss" profitAmount="2.6%" />
         </div>
       </div>
     </div>

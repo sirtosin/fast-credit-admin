@@ -5,16 +5,24 @@ import { NavLink } from "react-router-dom";
 import Dropdown from "../../assets/dropdown.svg";
 import Dropup from "../../assets/dropup.svg";
 import { SidebarData } from "../../data/data";
+import { AdminSidebarData } from "../../data/data";
 
 const Sidebar = ({ admin }) => {
   const [manage, setManage] = useState(false);
   const [loan, setLoan] = useState(false);
-  useEffect(() => {}, [admin]);
+  const [sidebar, setSidebar] = useState([]);
+  useEffect(() => {
+    if (admin === "Super Admin") {
+      setSidebar(SidebarData);
+    } else {
+      setSidebar(AdminSidebarData);
+    }
+  }, [admin]);
   return (
     <div className="sidebar-container">
       <img src={Logo} alt="logo" />
       <div className="sidebar-wrapper">
-        {SidebarData?.map((items, index) => {
+        {sidebar?.map((items, index) => {
           return (
             <div key={index}>
               <p className="sidebar-title">{items.title}</p>

@@ -8,8 +8,6 @@ import Bnpl from "../components/svgComponents/bnpl/bnpl";
 import Card from "../components/svgComponents/card/card";
 import Help from "../components/svgComponents/help/help";
 
-let admin = localStorage.getItem("Admin");
-
 export const SidebarData = [
   {
     title: "Overview",
@@ -19,7 +17,45 @@ export const SidebarData = [
         title: "Manage",
         icon: <Manage />,
         link: "/manage",
-        subNav: [admin === "Super Admin" ? { title: "Admin", link: "/manage/admin" } : "", { title: "Customer", link: "/manage/customer" }],
+        subNav: [
+          { title: "Admin", link: "/manage/admin" },
+          { title: "Customer", link: "/manage/customer" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Management",
+    subTitle: [
+      { title: "Wallet", icon: <Wallet />, link: "/wallet" },
+      {
+        title: "Loans",
+        icon: <Loans />,
+        link: "/loans",
+        subNav: [
+          { title: "Work Loans", link: "/workloans" },
+          { title: "Health Loans", link: "/healthloans" },
+        ],
+      },
+      { title: "Investments", icon: <Investments />, link: "/investments" },
+      { title: "VAS", icon: <Vas />, link: "/vas" },
+      { title: "BNPL", icon: <Bnpl />, link: "/bnpl" },
+      { title: "Cards", icon: <Card />, link: "/cards" },
+      { title: "Help & Support", icon: <Help />, link: "/help" },
+      { title: "Reports", icon: <Help />, link: "/reports" },
+    ],
+  },
+];
+export const AdminSidebarData = [
+  {
+    title: "Overview",
+    subTitle: [
+      { title: "Dashboard", icon: <DashboardIcon />, link: "/dashboard" },
+      {
+        title: "Manage",
+        icon: <Manage />,
+        link: "/manage",
+        subNav: [{ title: "Customer", link: "/manage/customer" }],
       },
     ],
   },

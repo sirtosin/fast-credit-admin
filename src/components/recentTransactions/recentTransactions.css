@@ -1,0 +1,100 @@
+.recent-transactions {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 0px;
+  margin-top: 32px;
+}
+
+.recent-trans {
+  width: 91%;
+  margin: 0px auto;
+}
+
+.recent-trans-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent-trans-head h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #1c1d21;
+}
+
+.recent-trans-head h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  padding: 8px 16px;
+  border: 1px solid #217c38;
+  border-radius: 24px;
+  cursor: pointer;
+  letter-spacing: -0.05em;
+  color: #029247;
+}
+
+.recent-trans-body {
+  margin-top: 36px;
+}
+
+.recent-trans-single {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.recent-trans-single > div {
+  display: flex;
+}
+
+.recent-trans-single .recent-trans-img {
+  background: #e6f3e3;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.recent-trans-single h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.trans-date {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  margin-top: 4px;
+  color: #4c4d50;
+}
+
+.trans-loss {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ff3b30;
+}
+
+.trans-gain {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: #34c759;
+}

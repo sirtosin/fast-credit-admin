@@ -8,7 +8,7 @@ import DashboardCategory from "../../components/dashboardCategory/dashboardCateg
 
 const Dashboard = () => {
   return (
-    <Layout>
+    <Layout type="first">
       <div className="dashboard-container">
         <FirstSection />
         <div className="second-section">

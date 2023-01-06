@@ -3,7 +3,7 @@ import "./dashboardSingle.css";
 import Gain from "../../assets/gain.svg";
 import Loss from "../../assets/loss.svg";
 
-const DashboardSingle = ({ img, title, amount, profit, profitAmount }) => {
+const DashboardSingle = ({ img, title, amount, profit, profitAmount, page }) => {
   return (
     <div className="dashboard-single-container">
       <div className="dashboard-single-single">
@@ -15,10 +15,12 @@ const DashboardSingle = ({ img, title, amount, profit, profitAmount }) => {
         </div>
         <div className="dashboard-single-body">
           <h2 className="amount">{amount}</h2>
-          <div className={profit === "gain" ? "gain" : profit === "loss" ? "loss" : null}>
-            {profit === "gain" ? <img src={Gain} alt="gain" /> : profit === "loss" ? <img src={Loss} alt="loss" /> : null}
-            <p>{profitAmount}</p>
-          </div>
+          {page === "dashboard" ? (
+            <div className={profit === "gain" ? "gain" : profit === "loss" ? "loss" : null}>
+              {profit === "gain" ? <img src={Gain} alt="gain" /> : profit === "loss" ? <img src={Loss} alt="loss" /> : null}
+              <p>{profitAmount}</p>
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

@@ -1,0 +1,89 @@
+.wallet-single {
+  width: 49%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 0px;
+}
+
+.wallet-single-cont {
+  width: 91%;
+  margin: 0px auto;
+}
+
+.wallet-single-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wallet-single-head {
+  display: flex;
+  align-items: center;
+}
+
+.wallet-single-head div {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #029247;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wallet-single-head h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #1f2024;
+  margin-left: 8px;
+}
+
+.wallet-single-header p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #4c4d50;
+  display: flex;
+  align-items: center;
+}
+
+.wallet-single-header span {
+  margin-right: 8px;
+}
+
+.wallet-single-body {
+  margin-top: 32px;
+}
+
+.wallet-single-body h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #1c1d21;
+}
+
+.wallet-single-body p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #4c4d50;
+  display: flex;
+  align-items: center;
+}
+
+.wallet-single-body span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  color: #ff3b30;
+}

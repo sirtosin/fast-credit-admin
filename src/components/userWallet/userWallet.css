@@ -1,0 +1,19 @@
+.user-wallet-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.user-wallet-wrapper {
+  width: 49%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-wallet-total {
+  width: 48%;
+}
+
+.user-wallet-wrappers {
+  width: 49%;
+}
