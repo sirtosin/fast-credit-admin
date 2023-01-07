@@ -1,0 +1,64 @@
+.user-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-card-wrapper {
+  width: 49%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-card-total {
+  width: 48%;
+}
+
+.user-card-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.user-transactions,
+.user-management {
+  width: 49%;
+}
+
+.card-management {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 0px;
+  margin-top: 32px;
+}
+
+.card-management div {
+  width: 91%;
+  margin: 0px auto;
+}
+
+.card-management div h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 16px;
+  letter-spacing: -0.05em;
+  color: #1c1d21;
+}
+
+.card-management div p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.05em;
+  color: #ff170a;
+  cursor: pointer;
+}
+
+.card-management div span {
+  margin-right: 16px;
+}

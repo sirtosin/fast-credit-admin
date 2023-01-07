@@ -14,6 +14,7 @@
   width: 48%;
 }
 
-.user-wallet-wrappers {
+.user-wallet-wrappers,
+.user-wallet-start {
   width: 49%;
 }

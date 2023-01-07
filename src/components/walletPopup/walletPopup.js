@@ -1,6 +1,6 @@
 import React from "react";
 import PasswordInput from "../passwordInput/passwordInput";
-import Popup from "../popup/popup";
+import Alert from "../alert/alert";
 import "./walletPopup.css";
 
 const WalletPopup = ({ title, overlay, action, disable, access, reset }) => {
@@ -8,33 +8,37 @@ const WalletPopup = ({ title, overlay, action, disable, access, reset }) => {
     <>
       {title === "Disable Wallet" ? (
         disable ? (
-          <Popup overlay={overlay} title={title} action={action}>
-            <h2 className="question">Are you sure you want to disable this Wallet ?</h2>
-            <div className="action-buttons">
-              <button onClick={action}>Cancel</button>
-              <button>Disable Wallet</button>
-            </div>
-          </Popup>
+          <Alert
+            overlay={overlay}
+            title={title}
+            action={action}
+            simple="simple"
+            question="Are you sure you want to disable this Wallet ?"
+            buttonText="Disable Wallet"
+            type="delete"
+          />
         ) : null
       ) : title === "Grant Wallet Access" ? (
         access ? (
-          <Popup overlay={overlay} title={title} action={action}>
-            <h2 className="question">Are you sure you want to grant access to this Wallet ?</h2>
-            <div className="action-buttons">
-              <button onClick={action}>Cancel</button>
-              <button>Grant Access</button>
-            </div>
-          </Popup>
+          <Alert
+            overlay={overlay}
+            title={title}
+            action={action}
+            simple="simple"
+            question="Are you sure you want to grant access to this Wallet ?"
+            buttonText="Grant Access"
+            type="notDelete"
+          />
         ) : null
       ) : title === "Reset Pin" ? (
         reset ? (
-          <Popup overlay={overlay} title={title} action={action}>
+          <Alert overlay={overlay} title={title} action={action}>
             <div className="reset-container">
               <PasswordInput label="PIN" placeholder="Enter Pin" />
               <PasswordInput label="Confirm PIN" placeholder="Enter Confirm Pin" />
               <button>Confirm</button>
             </div>
-          </Popup>
+          </Alert>
         ) : null
       ) : null}
     </>

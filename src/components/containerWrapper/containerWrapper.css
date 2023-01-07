@@ -1,0 +1,11 @@
+.container-wrapper {
+  width: 49%;
+  padding: 24px 0px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.container-single {
+  width: 91%;
+  margin: 0px auto;
+}

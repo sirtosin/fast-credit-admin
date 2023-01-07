@@ -1,0 +1,39 @@
+.card-header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-header-wrapper,
+.card-manage {
+  width: 49%;
+}
+
+.card-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-header-single {
+  width: 48%;
+}
+
+.card-manage {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px 0px;
+}
+
+.card-manage-single {
+  width: 91%;
+  margin: 0px auto;
+}
+
+.card-manage-single h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #1c1d21;
+}
