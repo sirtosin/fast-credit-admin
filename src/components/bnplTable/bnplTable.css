@@ -1,0 +1,102 @@
+.bnpl-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.bnpl-table p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: -0.05em;
+  color: #98989a;
+  width: 12%;
+}
+
+.bnpl-table-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.bnpl-table-body p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: left;
+  padding: 27px 0px;
+  border-top: 1px solid #e8eaed;
+  width: 12%;
+  letter-spacing: -0.05em;
+  color: #1f2024;
+}
+
+.bnpl-active span {
+  background: #029247;
+  border-radius: 24px;
+  padding: 4px 8px;
+  color: #ffffff;
+}
+
+.bnpl-ordered span {
+  background: #e88200;
+  border-radius: 24px;
+  padding: 4px 8px;
+  color: #ffffff;
+}
+
+.bnpl-deliver span {
+  background: #ff170a;
+  border-radius: 24px;
+  padding: 4px 8px;
+  color: #ffffff;
+}
+
+.bnpl-complete span {
+  background: #376bdb;
+  border-radius: 24px;
+  padding: 4px 8px;
+  color: #ffffff;
+}
+
+.bnpl-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+.bnpl-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 48%;
+}
+
+.bnpl-filter-singles {
+  width: 61%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bnpl-filter-single {
+  width: 47%;
+}
+
+.bnpl-filter h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  border: 1px solid #217c38;
+  border-radius: 24px;
+  padding: 8px 16px;
+  cursor: pointer;
+  letter-spacing: -0.05em;
+  color: #029247;
+}

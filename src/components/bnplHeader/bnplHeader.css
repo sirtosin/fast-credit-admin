@@ -1,0 +1,9 @@
+.bnpl-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bnpl-header-single {
+  width: 23%;
+}

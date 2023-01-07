@@ -3,146 +3,10 @@ import "./walletTable.css";
 import Search from "../../assets/search.svg";
 import User from "../../assets/profile-circle.svg";
 import WalletFilter from "../walletFilter/walletFilter";
+import { Entries, Customers } from "../../data/data";
 
 const WalletTable = ({ action, type, userAction, name }) => {
   const [search, setSearch] = useState("");
-  const customers = [
-    {
-      name: "Bolaji Oladele",
-      mail: "bolajiladele@gmail",
-      phone: "07050395563",
-      date: "23 Jun 2022",
-    },
-    {
-      name: "Adewunmi Emmanuel",
-      mail: "bolajiladele@gmail",
-      phone: "07050395563",
-      date: "03 Aug 2022",
-    },
-    {
-      name: "Olalekan Peter",
-      mail: "bolajiladele@gmail",
-      phone: "07050395563",
-      date: "23 Jun 2022",
-    },
-    {
-      name: "Bamidele Olawale",
-      mail: "bolajiladele@gmail",
-      phone: "07050395563",
-      date: "03 Aug 2022",
-    },
-    {
-      name: "Bamidele Olawale",
-      mail: "bolajiladele@gmail",
-      phone: "07050395563",
-      date: "23 Jun 2022",
-    },
-    {
-      name: "Bamidele Olawale",
-      mail: "bolajiladele@gmail",
-      phone: "07050395563",
-      date: "14 Dec 2012",
-    },
-    {
-      name: "Bolaji Oladele",
-      mail: "bolajiladele@gmail",
-      phone: "07050395563",
-      date: "23 Jun 2022",
-    },
-  ];
-  const entries = [
-    {
-      name: "Bolaji Oladele",
-      status: "Successful",
-      amount: "N2,012,1234.23",
-      type: "Bills",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-    {
-      name: "Bolaji Oladele",
-      status: "Failed",
-      amount: "N2,012,1234.23",
-      type: "Loan",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-    {
-      name: "Bolaji Oladele",
-      status: "Failed",
-      amount: "N2,012,1234.23",
-      type: "Loan",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-    {
-      name: "Bolaji Oladele",
-      status: "Successful",
-      amount: "N2,012,1234.23",
-      type: "Bills",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-    {
-      name: "Bolaji Oladele",
-      status: "Successful",
-      amount: "N2,012,1234.23",
-      type: "Bills",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-    {
-      name: "Bolaji Oladele",
-      status: "Failed",
-      amount: "N2,012,1234.23",
-      type: "Loan",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-    {
-      name: "Bolaji Oladele",
-      status: "Successful",
-      amount: "N2,012,1234.23",
-      type: "Bills",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-
-    {
-      name: "Bolaji Oladele",
-      status: "Successful",
-      amount: "N2,012,1234.23",
-      type: "Bills",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-
-    {
-      name: "Bolaji Oladele",
-      status: "Failed",
-      amount: "N2,012,1234.23",
-      type: "Loan",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-
-    {
-      name: "Bolaji Oladele",
-      status: "Successful",
-      amount: "N2,012,1234.23",
-      type: "Bills",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-    {
-      name: "Bolaji Oladele",
-      status: "Successful",
-      amount: "N2,012,1234.23",
-      type: "Bills",
-      ref: "12432322342",
-      date: "01-12-2022",
-    },
-  ];
 
   return (
     <div className="wallet-table">
@@ -183,30 +47,28 @@ const WalletTable = ({ action, type, userAction, name }) => {
               <p>Status</p>
               <p>Reference Number</p>
             </div>
-            {entries
-              ?.filter((item) => {
-                if (search === "") {
-                  return item;
-                } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
-                  return item;
-                } else {
-                  return null;
-                }
-              })
-              ?.map((items, index) => {
-                return (
-                  <div className="wallet-wrappers" key={index}>
-                    <p>{items.name}</p>
-                    <p>{items.amount}</p>
-                    <p>{items.date}</p>
-                    <p>{items.type}</p>
-                    <p className={items.status === "Successful" ? "wallet-success" : "wallet-failure"}>
-                      <span>{items.status}</span>
-                    </p>
-                    <p>{items.ref}</p>
-                  </div>
-                );
-              })}
+            {Entries?.filter((item) => {
+              if (search === "") {
+                return item;
+              } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+                return item;
+              } else {
+                return null;
+              }
+            })?.map((items, index) => {
+              return (
+                <div className="wallet-wrappers" key={index}>
+                  <p>{items.name}</p>
+                  <p>{items.amount}</p>
+                  <p>{items.date}</p>
+                  <p>{items.type}</p>
+                  <p className={items.status === "Successful" ? "wallet-success" : "wallet-failure"}>
+                    <span>{items.status}</span>
+                  </p>
+                  <p>{items.ref}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       ) : (
@@ -233,29 +95,27 @@ const WalletTable = ({ action, type, userAction, name }) => {
             </div>
           </div>
           <div className="wallet-table-body">
-            {customers
-              ?.filter((item) => {
-                if (search === "") {
-                  return item;
-                } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
-                  return item;
-                } else if (item.mail.toLowerCase().includes(search.toLowerCase())) {
-                  return item;
-                } else {
-                  return null;
-                }
-              })
-              ?.map((items, index) => {
-                return (
-                  <div className="wallet-wrapper" key={index} onClick={userAction}>
-                    <img src={User} alt="user" />
-                    <p>{items.name}</p>
-                    <p>{items.mail}</p>
-                    <p>{items.phone}</p>
-                    <p>{items.date}</p>
-                  </div>
-                );
-              })}
+            {Customers?.filter((item) => {
+              if (search === "") {
+                return item;
+              } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+                return item;
+              } else if (item.mail.toLowerCase().includes(search.toLowerCase())) {
+                return item;
+              } else {
+                return null;
+              }
+            })?.map((items, index) => {
+              return (
+                <div className="wallet-wrapper" key={index} onClick={userAction}>
+                  <img src={User} alt="user" />
+                  <p>{items.name}</p>
+                  <p>{items.mail}</p>
+                  <p>{items.phone}</p>
+                  <p>{items.date}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       )}

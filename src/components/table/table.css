@@ -1,0 +1,12 @@
+.table-container {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  margin-top: 32px;
+  padding: 24px 0px;
+}
+
+.wallet-table-single {
+  width: 97%;
+  margin: 0px auto;
+}
