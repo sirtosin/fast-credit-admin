@@ -43,7 +43,14 @@ const Bnpl = () => {
             action={() => {
               setCount(count - 1);
             }}>
-            <BnplTable type="more" />
+            <BnplTable
+              type="more"
+              tableAction={() => {
+                setOverlay(true);
+                setOrder(true);
+                setCount(count - 1);
+              }}
+            />
           </Layout>
         );
 

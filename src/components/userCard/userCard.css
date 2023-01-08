@@ -3,6 +3,10 @@
   justify-content: space-between;
 }
 
+.user-card-group {
+  width: 49%;
+}
+
 .user-card-wrapper {
   width: 49%;
   display: flex;

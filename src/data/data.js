@@ -283,3 +283,84 @@ export const Orders = [
     ref: "12432322342",
   },
 ];
+
+export const Transactions = [
+  {
+    name: "Adedeji K...",
+    subject: "Inability to Liquidate Loan: ",
+    ticket: "ref324253gdg..",
+    phone: "07050395563",
+    status: "Completed",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    name: "Adedeji K...",
+    subject: "Inability to Liquidate Loan: ",
+    ticket: "ref324253gdg..",
+    phone: "07050395563",
+    status: "Pending",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    name: "Adedeji K...",
+    subject: "Inability to Liquidate Loan: ",
+    ticket: "ref324253gdg..",
+    phone: "07050395563",
+    status: "Completed",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    name: "Adedeji K...",
+    subject: "Inability to Liquidate Loan: ",
+    ticket: "ref324253gdg..",
+    phone: "07050395563",
+    status: "Completed",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    name: "Adedeji K...",
+    subject: "Inability to Liquidate Loan: ",
+    ticket: "ref324253gdg..",
+    phone: "07050395563",
+    status: "Failed",
+    date: "28 September 2022 | 04:20 pm",
+  },
+];
+
+export const Reports = [
+  {
+    title: "Loans Generated Report",
+    generate: "Adedeji K...",
+    ref: "ref324253gdg..",
+    status: "Downloaded",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    title: "Loans Generated Report",
+    generate: "Adedeji K...",
+    ref: "ref324253gdg..",
+    status: "Draft",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    title: "Loans Generated Report",
+    generate: "Adedeji K...",
+    ref: "ref324253gdg..",
+    status: "Downloaded",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    title: "Loans Generated Report",
+    generate: "Adedeji K...",
+    ref: "ref324253gdg..",
+    status: "Downloaded",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    title: "Loans Generated Report",
+    generate: "Adedeji K...",
+    ref: "ref324253gdg..",
+    status: "Downloaded",
+    date: "28 September 2022 | 04:20 pm",
+  },
+];

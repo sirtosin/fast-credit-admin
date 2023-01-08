@@ -53,7 +53,9 @@ const UserWallet = ({ action, buttonAction }) => {
   return (
     <Layout text="Back to Wallet" action={action}>
       <div className="user-wallet-container">
-        <UserWalletSingle name="Bolaji Oladele" date="Joined August 13th, 2022" img={User} status="Account Verified" />
+        <div className="user-wallet-group">
+          <UserWalletSingle name="Bolaji Oladele" date="Joined August 13th, 2022" img={User} status="Account Verified" />
+        </div>
         <div className="user-wallet-wrapper">
           <div className="user-wallet-total">
             <DashboardSingle title="Total Credit" amount="NGN 200,000" img={Wallet} />

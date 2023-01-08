@@ -1,0 +1,45 @@
+.report-table-head,
+.report-table-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.report-table-head p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  width: 20%;
+  letter-spacing: -0.05em;
+  color: #98989a;
+}
+
+.report-table-body {
+  border-top: 1px solid #e8eaed;
+  cursor: pointer;
+}
+
+.report-table-body p {
+  font-style: normal;
+  font-weight: 400;
+  width: 20%;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #1f2024;
+  text-align: left;
+  padding: 27px 0px;
+}
+
+.report-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.report-filter-single {
+  width: 49%;
+}

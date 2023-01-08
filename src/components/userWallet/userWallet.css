@@ -4,6 +4,10 @@
   margin-top: 32px;
 }
 
+.user-wallet-group {
+  width: 49%;
+}
+
 .user-wallet-wrapper {
   width: 49%;
   display: flex;
