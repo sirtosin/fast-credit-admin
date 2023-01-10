@@ -59,65 +59,6 @@
   border-bottom: 2px solid #029247;
 }
 
-.login-group {
-  margin-top: 32px;
-}
-
-.login-group label {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 120%;
-  display: block;
-  margin-bottom: 16px;
-  color: #1c1d21;
-}
-
-.login-group span {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 120%;
-  margin-left: 4px;
-  color: #98989a;
-}
-
-.login-number {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  background: #f6f6f6;
-  padding: 16px 0px;
-}
-
-.login-number div {
-  width: 20%;
-  border-right: 1px solid #d6d3d3;
-}
-
-.login-number div img {
-  display: block;
-  margin: 0px auto;
-}
-
-.login-number input {
-  width: 75%;
-  border: none;
-  background-color: transparent;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 120%;
-  color: #bababb;
-  padding: 0px 24px;
-}
-
-.login-number input:focus {
-  outline: none;
-  border: none;
-}
-
 .forgot-p {
   font-style: normal;
   font-weight: 400;

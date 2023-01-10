@@ -3,14 +3,16 @@ import Popup from "../../components/popup/popup";
 import ReportHead from "../../components/reportsHead/reportsHead";
 import ReportTable from "../../components/reportTable/reportTable";
 import Layout from "../../HOC/layout/layout";
-import Dropdown from "../../assets/dropdown.svg";
 import "./reports.css";
+import Input from "../../components/input/input";
+import Button from "../../components/button/button";
 
 const Reports = () => {
   const [report, setReport] = useState(false);
   const [overlay, setOverlay] = useState(false);
-  const [productStatus, setProductStatus] = useState(false);
   const [product, setProduct] = useState("VAS");
+  const [productStatus, setProductStatus] = useState(false);
+  const dropdownList = ["VAS"];
   return (
     <Layout type="first">
       <ReportHead
@@ -29,42 +31,26 @@ const Reports = () => {
             setOverlay(false);
           }}>
           <div className="report-form-container">
-            <div className="report-form">
-              <label>Title</label>
-              <input type="text" placeholder="Customer Payments in Q3" />
+            <Input label="Title" placeholder="Customer Payments in Q3" type="text" />
+            <Input
+              label="Product"
+              dropdown={true}
+              dropdownList={dropdownList}
+              product={product}
+              productStatus={productStatus}
+              dropdownAction={() => {
+                setProductStatus(!productStatus);
+              }}
+              action={(e) => {
+                setProduct(e.target.outerText);
+                setProductStatus(!productStatus);
+              }}
+            />
+            <Input label="Start Date" type="date" />
+            <Input label="End Date" type="date" />
+            <div className="report-form-button">
+              <Button text="Click to Save" bgColor="#029247" color="white" padding="10px 0px" border="none" />
             </div>
-            <div className="report-form">
-              <label>Product</label>
-              <div>
-                <p>{product}</p>
-                <div
-                  className="dropdown-icon"
-                  onClick={() => {
-                    setProductStatus(!productStatus);
-                  }}>
-                  <img src={Dropdown} alt="dropdown" />
-                </div>
-              </div>
-              {productStatus ? (
-                <div>
-                  <p
-                    onClick={() => {
-                      setProduct("VAS");
-                    }}>
-                    VAS
-                  </p>
-                </div>
-              ) : null}
-            </div>
-            <div className="report-form">
-              <label>Start Date</label>
-              <input type="date" placeholder="Customer Payments in Q3" />
-            </div>
-            <div className="report-form">
-              <label>End Date </label>
-              <input type="date" placeholder="Customer Payments in Q3" />
-            </div>
-            <button>Click to Save</button>
           </div>
         </Popup>
       ) : null}

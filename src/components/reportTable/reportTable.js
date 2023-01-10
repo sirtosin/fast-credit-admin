@@ -45,7 +45,7 @@ const ReportTable = () => {
             <p>{items.title}</p>
             <p>{items.generate}</p>
             <p>{items.ref}</p>
-            <p className={items.status === "Downloaded" ? "help-download" : items.status === "Draft" ? "help-draft" : null}>
+            <p className={items.status === "Downloaded" ? "report-download" : items.status === "Draft" ? "report-draft" : null}>
               <span>{items.status}</span>
             </p>
             <p>{items.date}</p>

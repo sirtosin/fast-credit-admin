@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./login.css";
 import Logo from "../../assets/logo.png";
-import Flag from "../../assets/flag.svg";
 import Button from "../button/button";
 import { useNavigate } from "react-router-dom";
 import PasswordInput from "../passwordInput/passwordInput";
+import PhoneInput from "../phoneInput/phoneInput";
 
 const LoginComponent = () => {
   const navigate = useNavigate();
@@ -34,32 +34,20 @@ const LoginComponent = () => {
           </h3>
         </div>
         <div className="login-body">
-          <div className="login-group">
-            <label>
-              Phone number <span>(Provide number)</span>
-            </label>
-            <div className="login-number">
-              <div>
-                <img src={Flag} alt="Flag" />
-              </div>
-              <input
-                type="number"
-                placeholder="0000 000 0000"
-                value={number}
-                required
-                onChange={(e) => {
-                  setNumber(e.target.value);
-                }}
-              />
-            </div>
-          </div>
+          <PhoneInput
+            onChange={(e) => {
+              setNumber(e.target.value);
+            }}
+            number={number}
+          />
           <PasswordInput password={password} setPassword={setPassword} label="Password" placeholder="Enter your password" />
-
           <p className="forgot-p">Forgot Password?</p>
           <div className="login-button">
             <Button
               text="Continue"
               bgColor="#029247"
+              padding="24px 0px"
+              border="none"
               color="white"
               action={() => {
                 if (user === "admin") {

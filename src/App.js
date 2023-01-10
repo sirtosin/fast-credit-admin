@@ -3,7 +3,9 @@ import Bnpl from "./pages/bnpl/bnpl";
 import Cards from "./pages/cards/cards";
 import Dashboard from "./pages/dashboard/dashboard";
 import Help from "./pages/help/help";
+import Investments from "./pages/investments/investments";
 import Login from "./pages/login/login";
+import ManageAdmin from "./pages/manageAdmin/manageAdmin";
 import Reports from "./pages/reports/reports";
 import Wallet from "./pages/wallet/wallet";
 
@@ -18,6 +20,8 @@ function App() {
         <Route path="/bnpl" element={<Bnpl />} />
         <Route path="/help" element={<Help />} />
         <Route path="/reports" element={<Reports />} />
+        <Route path="/manage/admin" element={<ManageAdmin />} />
+        <Route path="/investments" element={<Investments />} />
       </Routes>
     </div>
   );

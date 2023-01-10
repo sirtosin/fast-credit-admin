@@ -1,0 +1,10 @@
+.manage-header-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 49%;
+}
+
+.manage-head-cont {
+  width: 48%;
+}
