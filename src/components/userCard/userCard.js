@@ -53,7 +53,7 @@ const UserCard = ({ action, deleteAction }) => {
     <Layout text="Back to customers" action={action}>
       <div className="user-card-header">
         <div className="user-card-group">
-          <UserWalletSingle name="Bolaji Oladele" img={User} date="Joined August 13th, 2022" status="Account Verified" />
+          <UserWalletSingle name="Bolaji Oladele" type="cards" img={User} date="Joined August 13th, 2022" status="Account Verified" />
         </div>
         <div className="user-card-wrapper">
           <div className="user-card-total">

@@ -11,7 +11,7 @@ const Cards = () => {
   const [count, setCount] = useState(0);
   const [overlay, setOverlay] = useState(false);
   const [card, setCard] = useState(false);
-  const renderForm = () => {
+  const renderPage = () => {
     switch (count) {
       case 0:
         return (
@@ -66,7 +66,7 @@ const Cards = () => {
         );
     }
   };
-  return renderForm();
+  return renderPage();
 };
 
 export default Cards;

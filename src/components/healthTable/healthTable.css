@@ -1,0 +1,75 @@
+.health-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.health-table p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: -0.05em;
+  color: #98989a;
+  width: 12%;
+  display: flex;
+}
+
+.health-table-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.health-table-body p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: left;
+  padding: 27px 0px;
+  border-top: 1px solid #e8eaed;
+  width: 12%;
+  letter-spacing: -0.05em;
+  color: #1f2024;
+}
+
+.health-table-body p:nth-child(4),
+.health-table p:nth-child(4) {
+  width: 7%;
+}
+
+.health-table span {
+  font-size: 12px;
+}
+
+.health-table-body span {
+  border-radius: 24px;
+  padding: 4px 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+}
+
+.health-request span {
+  background: #376bdb;
+}
+.health-paid span {
+  background: #e88200;
+}
+.health-pending span {
+  background: #9400ee;
+}
+.health-failed span {
+  background: #ff170a;
+}
+.health-approve span {
+  background: #029247;
+}

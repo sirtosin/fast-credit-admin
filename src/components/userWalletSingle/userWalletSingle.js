@@ -1,7 +1,7 @@
 import React from "react";
 import "./userWalletSingle.css";
 
-const UserWalletSingle = ({ name, date, img, status }) => {
+const UserWalletSingle = ({ name, date, img, status, type, investment, rate, loanStatus }) => {
   return (
     <div className="user-wallet-single">
       <div className="user-wallet-cont">
@@ -11,10 +11,37 @@ const UserWalletSingle = ({ name, date, img, status }) => {
           </div>
           <div>
             <h2>{name}</h2>
-            <p>{date}</p>
+            {type === "cards" ? (
+              <p>{date}</p>
+            ) : type === "investments" ? (
+              <>
+                <h3>
+                  Investment: <span>{investment}</span>
+                </h3>
+                <h4>Investment Date: {date}</h4>
+              </>
+            ) : type === "loans" ? (
+              <>
+                <h3>
+                  <span>N412,1234.23/</span>
+                  N2,012,1234.23
+                </h3>
+                <h4>Interest Rate: {rate}</h4>
+              </>
+            ) : null}
           </div>
         </div>
-        <p>{status}</p>
+        <div className="user-wallet-status">
+          <p>{status}</p>
+          {type === "loans" ? (
+            <h2
+              className={
+                loanStatus === "Approved" ? "user-wallet-approved" : loanStatus === "Pending" ? "user-wallet-pending" : loanStatus === "Requested" ? "user-wallet-request" : null
+              }>
+              {loanStatus}
+            </h2>
+          ) : null}
+        </div>
       </div>
     </div>
   );

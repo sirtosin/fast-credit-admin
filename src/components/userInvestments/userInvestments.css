@@ -1,0 +1,62 @@
+.user-investments-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user-investment-group {
+  width: 39%;
+}
+
+.top-gain {
+  width: 18%;
+  padding: 32px 0px 24px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.top-gain-single {
+  width: 76%;
+  margin: 0px auto;
+}
+
+.top-gain-single h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #1c1d21;
+}
+
+.top-gain-single h2 {
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #2eae4e;
+}
+
+.top-gain-single p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #1c1d21;
+  margin-top: 8px;
+}
+
+.user-investments-body {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user-investment-details,
+.user-investment-manage {
+  width: 49%;
+}

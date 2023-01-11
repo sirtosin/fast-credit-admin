@@ -1,12 +1,12 @@
 import React from "react";
 import "./recentTransactions.css";
 
-const RecentTransaction = ({ transactions }) => {
+const RecentTransaction = ({ transactions, page, title }) => {
   return (
     <div className="recent-transactions">
       <div className="recent-trans">
         <div className="recent-trans-head">
-          <h2>Recent Transactions</h2>
+          <h2>{title}</h2>
           <h3>Show All</h3>
         </div>
         <div className="recent-trans-body">
@@ -14,9 +14,11 @@ const RecentTransaction = ({ transactions }) => {
             return (
               <div className="recent-trans-single" key={index}>
                 <div>
-                  <div className="recent-trans-img">
-                    <img src={item.img} alt="item" />
-                  </div>
+                  {page === "wallet" ? (
+                    <div className="recent-trans-img">
+                      <img src={item.img} alt="item" />
+                    </div>
+                  ) : null}
                   <div>
                     <h2>{item.title}</h2>
                     <p className="trans-date">{item.date}</p>

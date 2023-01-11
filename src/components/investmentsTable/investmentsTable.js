@@ -1,15 +1,28 @@
 import React, { useState } from "react";
 import { Investment } from "../../data/data";
 import Table from "../table/table";
+import WalletFilter from "../walletFilter/walletFilter";
 import "./investmentsTable.css";
 
-const InvestmentsTable = () => {
+const InvestmentsTable = ({ action }) => {
   const [search, setSearch] = useState("");
   return (
     <Table
       action={(e) => {
         setSearch(e.target.value);
       }}
+      head={
+        <div className="bnpl-filter">
+          <div className="bnpl-filter-singles">
+            <div className="bnpl-filter-single">
+              <WalletFilter name="Status" />
+            </div>
+            <div className="bnpl-filter-single">
+              <WalletFilter name="View" />
+            </div>
+          </div>
+        </div>
+      }
       title="Customers"
       tableHead={
         <div className="manage-table">
@@ -34,7 +47,7 @@ const InvestmentsTable = () => {
         }
       })?.map((items, index) => {
         return (
-          <div className="manage-table-body" key={index}>
+          <div className="manage-table-body" key={index} onClick={action}>
             <p>{items.name}</p>
             <p>{items.amount}</p>
             <p>{items.yield}</p>

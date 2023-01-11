@@ -1,0 +1,9 @@
+.health-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.health-single {
+  width: 18%;
+}

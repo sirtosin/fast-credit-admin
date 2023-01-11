@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../../HOC/layout/layout";
 import DashboardSingle from "../dashboardSingle/dashboardSingle";
 import UserWalletSingle from "../userWalletSingle/userWalletSingle";
@@ -11,8 +11,17 @@ import User from "../../assets/profileImg.png";
 import Glo from "../../assets/glo.svg";
 import Gtbank from "../../assets/gtbank.svg";
 import Dstv from "../../assets/dstv.svg";
+import WalletPopup from "../walletPopup/walletPopup";
+import Disabled from "../../assets/disable.svg";
+import WalletEntries from "../../assets/walletEntries.svg";
+import Settings from "../../assets/settings.svg";
+import Reset from "../../assets/reset.svg";
 
 const UserWallet = ({ action, buttonAction }) => {
+  const [overlay, setOverlay] = useState(false);
+  const [disable, setDisable] = useState(false);
+  const [access, setAccess] = useState(false);
+  const [reset, setReset] = useState(false);
   const transactions = [
     { title: "Glo airtime purchase", img: Glo, date: "28 September 2022 04:20 pm", profit: "loss", amount: "3,000" },
     { title: "Khalifa Mariam", img: Gtbank, date: "28 September 2022 04:20 pm", profit: "gain", amount: "3,000" },
@@ -54,7 +63,7 @@ const UserWallet = ({ action, buttonAction }) => {
     <Layout text="Back to Wallet" action={action}>
       <div className="user-wallet-container">
         <div className="user-wallet-group">
-          <UserWalletSingle name="Bolaji Oladele" date="Joined August 13th, 2022" img={User} status="Account Verified" />
+          <UserWalletSingle name="Bolaji Oladele" type="cards" date="Joined August 13th, 2022" img={User} status="Account Verified" />
         </div>
         <div className="user-wallet-wrapper">
           <div className="user-wallet-total">
@@ -70,10 +79,60 @@ const UserWallet = ({ action, buttonAction }) => {
           <WalletDetails page="wallet" details={details} title="Customer Wallet Details" />
         </div>
         <div className="user-wallet-wrappers">
-          <ManageWallet action={buttonAction} />
-          <RecentTransaction transactions={transactions} />
+          <ManageWallet
+            title="Manage Wallet"
+            firstText="Disable Wallet"
+            secondText="View Wallet Entries"
+            thirdText="Grant Wallet Access"
+            fourthText="Reset Wallet Pin"
+            firstImg={Disabled}
+            secondImg={WalletEntries}
+            thirdImg={Settings}
+            fourthImg={Reset}
+            action={buttonAction}
+            firstAction={() => {
+              setOverlay(true);
+              setDisable(true);
+            }}
+            thirdAction={() => {
+              setOverlay(true);
+              setAccess(true);
+            }}
+            fourthAction={() => {
+              setOverlay(true);
+              setReset(true);
+            }}
+          />
+          <RecentTransaction transactions={transactions} title="Recent Transactions" page="wallet" />
         </div>
       </div>
+      <WalletPopup
+        overlay={overlay}
+        title="Disable Wallet"
+        disable={disable}
+        action={() => {
+          setDisable(false);
+          setOverlay(false);
+        }}
+      />
+      <WalletPopup
+        overlay={overlay}
+        title="Grant Wallet Access"
+        access={access}
+        action={() => {
+          setAccess(false);
+          setOverlay(false);
+        }}
+      />
+      <WalletPopup
+        overlay={overlay}
+        title="Reset Pin"
+        reset={reset}
+        action={() => {
+          setReset(false);
+          setOverlay(false);
+        }}
+      />
     </Layout>
   );
 };
