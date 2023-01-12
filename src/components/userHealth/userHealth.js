@@ -14,7 +14,7 @@ import Alert from "../alert/alert";
 import RecentTransaction from "../recentTransactions/recentTransactions";
 
 const UserHealth = () => {
-  const [loanStatus, setLoanStatus] = useState("Pending");
+  const [loanStatus] = useState("Pending");
   const [overlay, setOverlay] = useState(false);
   const [generate, setGenerate] = useState(false);
   const details = [

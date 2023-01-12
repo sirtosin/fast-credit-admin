@@ -28,6 +28,19 @@ const UserWalletSingle = ({ name, date, img, status, type, investment, rate, loa
                 </h3>
                 <h4>Interest Rate: {rate}</h4>
               </>
+            ) : type === "vas" ? (
+              <h3>
+                Total VAS Purhcase: <span>N23,354,454</span>
+              </h3>
+            ) : type === "help" ? (
+              <div>
+                <h3>
+                  Category: <span>Payments</span>
+                </h3>
+                <h3>
+                  | Type: <span>Dispense Error</span>
+                </h3>
+              </div>
             ) : null}
           </div>
         </div>

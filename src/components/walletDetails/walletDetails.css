@@ -66,3 +66,27 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.wallet-details-pending {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  background: #e88200;
+  border-radius: 24px;
+  padding: 4px 8px;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+}
+
+.wallet-details-complete {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  background: #029247;
+  border-radius: 24px;
+  padding: 4px 8px;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import HelpHeader from "../../components/helpHeader/helpHeader";
 import HelpTable from "../../components/helpTable/helpTable";
+import SingleHelp from "../../components/singleHelp/singleHelp";
 import Layout from "../../HOC/layout/layout";
 import "./help.css";
 
@@ -46,7 +47,7 @@ const Help = () => {
             action={() => {
               setCount(count - 2);
             }}>
-            <h2>Hello World</h2>
+            <SingleHelp />
           </Layout>
         );
       default:

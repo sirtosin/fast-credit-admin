@@ -11,7 +11,11 @@ const WalletDetails = ({ page, details, title }) => {
             return (
               <div className="wallet-details-group" key={index}>
                 <p className="title">{item.title}</p>
-                <p className="value">{item.value}</p>
+                {item.title === "Status" ? (
+                  <p className={item.value === "Pending" ? "wallet-details-pending" : item.value === "Completed" ? "wallet-details-complete" : null}>{item.value}</p>
+                ) : (
+                  <p className="value">{item.value}</p>
+                )}
               </div>
             );
           })}

@@ -1,0 +1,100 @@
+.user-vas-body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.user-vas-purchase,
+.user-vas-wrapper {
+  width: 49%;
+}
+
+.user-vas-manage {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 0px;
+  margin-bottom: 24px;
+}
+
+.single-user-manage {
+  width: 91%;
+  margin: 0px auto;
+}
+
+.single-user-manage h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #4c4d50;
+}
+
+.single-user-manage .manage-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 42px;
+}
+
+.manage-buttons div {
+  width: 48%;
+}
+
+.approve-head {
+  margin-top: 24px;
+  width: 71%;
+  margin: 24px auto 0px;
+}
+
+.approve-head > p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  letter-spacing: -0.05em;
+  color: #98989a;
+}
+
+.approve-wrapper {
+  margin: 40px 0px;
+}
+
+.approve-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0px;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.approve-body p:first-child {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: -0.05em;
+  color: #98989a;
+  width: 30%;
+}
+
+.approve-body p:last-child {
+  text-align: left;
+  width: 50%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: right;
+  letter-spacing: -0.05em;
+  color: #1f2024;
+}
+
+.approve-buttons {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}

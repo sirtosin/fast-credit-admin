@@ -8,6 +8,7 @@ import Investments from "./pages/investments/investments";
 import Login from "./pages/login/login";
 import ManageAdmin from "./pages/manageAdmin/manageAdmin";
 import Reports from "./pages/reports/reports";
+import Vas from "./pages/vas/vas";
 import Wallet from "./pages/wallet/wallet";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/manage/admin" element={<ManageAdmin />} />
         <Route path="/loans/healthloans" element={<HealthLoans />} />
         <Route path="/investments" element={<Investments />} />
+        <Route path="/vas" element={<Vas />} />
       </Routes>
     </div>
   );

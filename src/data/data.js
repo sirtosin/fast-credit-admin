@@ -7,6 +7,11 @@ import Vas from "../components/svgComponents/vas/vas";
 import Bnpl from "../components/svgComponents/bnpl/bnpl";
 import Card from "../components/svgComponents/card/card";
 import Help from "../components/svgComponents/help/help";
+import MTN from "../assets/mtn.png";
+import Airtel from "../assets/airtel.png";
+import Dstv from "../assets/dstv.png";
+import Etisalat from "../assets/9mobile.png";
+import Glo from "../assets/glo.png";
 
 export const SidebarData = [
   {
@@ -545,5 +550,58 @@ export const healthLoans = [
     type: "Health",
     status: "Approved",
     ref: "12432322342",
+  },
+];
+
+export const VAS = [
+  {
+    name: "Adedeji K...",
+    amount: "3,000",
+    img: MTN,
+    network: "MTN",
+    type: "Airtime",
+    phone: "07050395563",
+    status: "Completed",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    name: "Adedeji K...",
+    amount: "3,000",
+    img: Glo,
+    network: "Glo",
+    type: "Data",
+    phone: "07050395563",
+    status: "Pending",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    name: "Adedeji K...",
+    amount: "3,000",
+    img: Dstv,
+    network: "DsTv",
+    type: "Bills",
+    phone: "07050395563",
+    status: "Completed",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    name: "Adedeji K...",
+    amount: "3,000",
+    img: Airtel,
+    network: "Airtel",
+    type: "Data",
+    phone: "07050395563",
+    status: "Completed",
+    date: "28 September 2022 | 04:20 pm",
+  },
+  {
+    name: "Adedeji K...",
+    amount: "3,000",
+    img: Etisalat,
+    network: "9Mobile",
+    type: "Data",
+    phone: "07050395563",
+    status: "Failed",
+    date: "28 September 2022 | 04:20 pm",
   },
 ];

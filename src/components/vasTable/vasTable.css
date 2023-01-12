@@ -1,0 +1,82 @@
+.vas-table,
+.vas-table-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.vas-table p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  width: 12%;
+  letter-spacing: -0.05em;
+  color: #98989a;
+}
+
+.vas-table-body {
+  border-top: 1px solid #e8eaed;
+  cursor: pointer;
+}
+
+.vas-table-body p {
+  font-style: normal;
+  font-weight: 400;
+  width: 12%;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #1f2024;
+  text-align: left;
+  padding: 27px 0px;
+}
+
+.vas-table-body p:first-child,
+.vas-table p:first-child,
+.vas-table-body p:nth-child(2),
+.vas-table p:nth-child(2),
+.vas-table-body p:nth-child(4),
+.vas-table p:nth-child(4) {
+  width: 10%;
+}
+
+.vas-table-body p:last-child,
+.vas-table p:last-child {
+  width: 22%;
+}
+
+.vas-table-body p:nth-child(3) {
+  display: flex;
+  align-items: center;
+}
+
+.vas-table-body p:nth-child(3) span {
+  margin-right: 16px;
+}
+
+.vas-complete span,
+.vas-pending span,
+.vas-failed span {
+  border-radius: 24px;
+  padding: 4px 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+}
+
+.vas-complete span {
+  background: #029247;
+}
+
+.vas-failed span {
+  background: #bd0a00;
+}
+
+.vas-pending span {
+  background: #e88200;
+}

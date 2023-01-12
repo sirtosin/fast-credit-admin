@@ -8,6 +8,9 @@ const HealthTable = ({ tableAction }) => {
   return (
     <Table
       title="Customers"
+      action={(e) => {
+        setSearch(e.target.value);
+      }}
       tableHead={
         <div className="health-table">
           <p>Name</p>

@@ -1,0 +1,9 @@
+.vas-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-vas-header {
+  width: 32%;
+}

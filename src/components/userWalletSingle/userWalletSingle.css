@@ -30,8 +30,12 @@
   height: 100%;
 }
 
-.user-wallet-name div {
-  margin-left: 16px;
+.user-wallet-name > div {
+  margin-left: 32px;
+}
+
+.user-wallet-name > div div {
+  display: flex;
 }
 
 .user-wallet-name div h2 {
