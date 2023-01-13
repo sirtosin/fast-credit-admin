@@ -1,5 +1,6 @@
 import React from "react";
 import "./userWalletSingle.css";
+import Star from "../../assets/star.svg";
 
 const UserWalletSingle = ({ name, date, img, status, type, investment, rate, loanStatus }) => {
   return (
@@ -7,7 +8,8 @@ const UserWalletSingle = ({ name, date, img, status, type, investment, rate, loa
       <div className="user-wallet-cont">
         <div className="user-wallet-name">
           <div className="user-wallet-img">
-            <img src={img} alt="user" />
+            <img src={img} alt="user" className="user-img" />
+            <img src={Star} alt="star" className="star" />
           </div>
           <div>
             <h2>{name}</h2>
