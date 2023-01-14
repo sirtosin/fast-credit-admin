@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { healthLoans } from "../../data/data";
 import Table from "../table/table";
-import "./healthTable.css";
+import WalletFilter from "../walletFilter/walletFilter";
+import "./loansTable.css";
 
-const HealthTable = ({ tableAction }) => {
+const LoansTable = ({ tableAction }) => {
   const [search, setSearch] = useState("");
   return (
     <Table
@@ -11,6 +12,16 @@ const HealthTable = ({ tableAction }) => {
       action={(e) => {
         setSearch(e.target.value);
       }}
+      head={
+        <div className="loans-filter">
+          <div className="loans-filter-single">
+            <WalletFilter name="Status" />
+          </div>
+          <div className="loans-filter-single">
+            <WalletFilter name="View" />
+          </div>
+        </div>
+      }
       tableHead={
         <div className="health-table">
           <p>Name</p>
@@ -21,7 +32,7 @@ const HealthTable = ({ tableAction }) => {
           <p>DTI</p>
           <p>Date Created</p>
           <p>Tenure</p>
-          <p>Type</p>
+          {/* <p>Type</p> */}
           <p>Status</p>
           <p>Reference No.</p>
         </div>
@@ -45,7 +56,7 @@ const HealthTable = ({ tableAction }) => {
               <p>{items.Dti}</p>
               <p>{items.date}</p>
               <p>{items.tenure}</p>
-              <p>{items.type}</p>
+              {/* <p>{items.type}</p> */}
               <p
                 className={
                   items.status === "Requested"
@@ -70,4 +81,4 @@ const HealthTable = ({ tableAction }) => {
   );
 };
 
-export default HealthTable;
+export default LoansTable;

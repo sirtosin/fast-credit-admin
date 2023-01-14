@@ -1,8 +1,8 @@
 import React from "react";
 import SingleCard from "../singleCard/singleCard";
-import "./healthHeader.css";
+import "./loansHeader.css";
 
-const HealthHeader = () => {
+const LoansHeader = () => {
   return (
     <div className="health-header">
       <div className="health-single">
@@ -24,4 +24,4 @@ const HealthHeader = () => {
   );
 };
 
-export default HealthHeader;
+export default LoansHeader;

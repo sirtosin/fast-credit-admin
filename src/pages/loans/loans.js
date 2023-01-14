@@ -3,11 +3,10 @@ import LoansHeader from "../../components/loansHeader/loansHeader";
 import LoansTable from "../../components/loansTable/loansTable";
 import UserLoans from "../../components/userLoans/userLoans";
 import Layout from "../../HOC/layout/layout";
-import "./healthLoans.css";
+import "./loans.css";
 
-const HealthLoans = () => {
+const Loans = () => {
   const [count, setCount] = useState(0);
-
   const renderPage = () => {
     switch (count) {
       case 0:
@@ -24,15 +23,24 @@ const HealthLoans = () => {
 
       case 1:
         return (
-          <Layout text="Back to Loans">
+          <Layout
+            text="Back to Loans"
+            action={() => {
+              setCount(count - 1);
+            }}>
             <UserLoans />
           </Layout>
         );
+
       default:
         return (
           <Layout type="first">
             <LoansHeader />
-            <LoansTable />
+            <LoansTable
+              tableAction={() => {
+                setCount(count + 1);
+              }}
+            />
           </Layout>
         );
     }
@@ -40,4 +48,4 @@ const HealthLoans = () => {
   return renderPage();
 };
 
-export default HealthLoans;
+export default Loans;

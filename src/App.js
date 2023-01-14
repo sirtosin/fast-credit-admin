@@ -5,6 +5,7 @@ import Dashboard from "./pages/dashboard/dashboard";
 import HealthLoans from "./pages/healthLoans/healthLoans";
 import Help from "./pages/help/help";
 import Investments from "./pages/investments/investments";
+import Loans from "./pages/loans/loans";
 import Login from "./pages/login/login";
 import ManageAdmin from "./pages/manageAdmin/manageAdmin";
 import Reports from "./pages/reports/reports";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/loans/healthloans" element={<HealthLoans />} />
         <Route path="/investments" element={<Investments />} />
         <Route path="/vas" element={<Vas />} />
+        <Route path="/loans/workloans" element={<Loans />} />
       </Routes>
     </div>
   );

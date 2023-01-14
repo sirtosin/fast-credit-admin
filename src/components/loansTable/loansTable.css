@@ -73,3 +73,13 @@
 .health-approve span {
   background: #029247;
 }
+
+.loans-filter {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.loans-filter-single {
+  width: 47%;
+}
