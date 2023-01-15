@@ -2,15 +2,28 @@ import React, { useState } from "react";
 import "./vasTable.css";
 import Table from "../table/table";
 import { VAS } from "../../data/data";
+import WalletFilter from "../walletFilter/walletFilter";
 
 const VasTable = ({ action }) => {
   const [search, setSearch] = useState("");
+  const statusData = ["Completed", "Pending", "Failed"];
+  const viewData = ["Today", "Yesterday", "1 Week", "1 Month", "1 Year"];
   return (
     <Table
       title="Transactions"
       action={(e) => {
         setSearch(e.target.value);
       }}
+      head={
+        <div className="vas-filter">
+          <div className="vas-filter-single">
+            <WalletFilter name="Status" data={statusData} />
+          </div>
+          <div className="vas-filter-single">
+            <WalletFilter name="View" data={viewData} />
+          </div>
+        </div>
+      }
       tableHead={
         <div className="vas-table">
           <p>User</p>

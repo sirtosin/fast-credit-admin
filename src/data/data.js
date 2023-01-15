@@ -73,8 +73,8 @@ export const AdminSidebarData = [
         icon: <Loans />,
         link: "",
         subNav: [
-          { title: "Work Loans", link: "/workloans" },
-          { title: "Health Loans", link: "/healthloans" },
+          { title: "Work Loans", link: "/loans/workloans" },
+          { title: "Health Loans", link: "/loans/healthloans" },
         ],
       },
       { title: "Investments", icon: <Investments />, link: "/investments" },

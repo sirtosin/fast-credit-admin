@@ -6,26 +6,26 @@ import "./investmentsTable.css";
 
 const InvestmentsTable = ({ action }) => {
   const [search, setSearch] = useState("");
+  const statusData = ["All", "Active", "Complete"];
+  const viewData = ["Today", "Yesterday", "1 Week", "1 Month", "1 Year"];
   return (
     <Table
       action={(e) => {
         setSearch(e.target.value);
       }}
       head={
-        <div className="bnpl-filter">
-          <div className="bnpl-filter-singles">
-            <div className="bnpl-filter-single">
-              <WalletFilter name="Status" />
-            </div>
-            <div className="bnpl-filter-single">
-              <WalletFilter name="View" />
-            </div>
+        <div className="investments-filter">
+          <div className="investments-filter-single">
+            <WalletFilter name="Status" data={statusData} />
+          </div>
+          <div className="investments-filter-single">
+            <WalletFilter name="View" data={viewData} />
           </div>
         </div>
       }
       title="Customers"
       tableHead={
-        <div className="manage-table">
+        <div className="investments-table">
           <p>Name</p>
           <p>Amount</p>
           <p>Yield Amount</p>
@@ -34,7 +34,7 @@ const InvestmentsTable = ({ action }) => {
           <p>Tenure</p>
           <p>Type</p>
           <p>Status</p>
-          <p>Reference Number</p>
+          <p>Reference No</p>
         </div>
       }>
       {Investment?.filter((item) => {
@@ -47,7 +47,7 @@ const InvestmentsTable = ({ action }) => {
         }
       })?.map((items, index) => {
         return (
-          <div className="manage-table-body" key={index} onClick={action}>
+          <div className="investments-table-body" key={index} onClick={action}>
             <p>{items.name}</p>
             <p>{items.amount}</p>
             <p>{items.yield}</p>
@@ -55,7 +55,7 @@ const InvestmentsTable = ({ action }) => {
             <p>{items.rate}</p>
             <p>{items.tenure}</p>
             <p>{items.type}</p>
-            <p className={items.status === "Active" ? "manage-admin-active" : items.status === "Suspended" ? "manage-admin-suspended" : null}>
+            <p className={items.status === "Active" ? "investments-active" : items.status === "Complete" ? "investments-complete" : null}>
               <span>{items.status}</span>
             </p>
             <p>{items.ref}</p>

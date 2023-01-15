@@ -6,6 +6,7 @@ import WalletFilter from "../walletFilter/walletFilter";
 
 const HelpTable = ({ tableAction, type, action }) => {
   const [search, setSearch] = useState("");
+  const viewData = ["Today", "Yesterday", "1 Week", "1 Month", "1 Year"];
   return (
     <Table
       action={(e) => {
@@ -14,7 +15,7 @@ const HelpTable = ({ tableAction, type, action }) => {
       head={
         <div className="help-filter">
           <div className="help-filter-single">
-            <WalletFilter name="View" />
+            <WalletFilter name="View" data={viewData} />
           </div>
           {type !== "more" ? <h2 onClick={action}>Show All</h2> : null}
         </div>

@@ -6,6 +6,8 @@ import "./loansTable.css";
 
 const LoansTable = ({ tableAction }) => {
   const [search, setSearch] = useState("");
+  const typeData = ["Requested", "Approved", "Paid"];
+  const viewData = ["Today", "Yesterday", "1 Week", "1 Month", "1 Year"];
   return (
     <Table
       title="Customers"
@@ -15,10 +17,10 @@ const LoansTable = ({ tableAction }) => {
       head={
         <div className="loans-filter">
           <div className="loans-filter-single">
-            <WalletFilter name="Status" />
+            <WalletFilter name="Type" data={typeData} />
           </div>
           <div className="loans-filter-single">
-            <WalletFilter name="View" />
+            <WalletFilter name="View" data={viewData} />
           </div>
         </div>
       }

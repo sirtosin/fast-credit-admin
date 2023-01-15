@@ -7,7 +7,10 @@ import { Entries, Customers } from "../../data/data";
 
 const WalletTable = ({ action, type, userAction, name }) => {
   const [search, setSearch] = useState("");
-
+  const viewData = ["All", "Active", "Inactive"];
+  const statusData = ["All", "Successful", "Failed"];
+  const typeData = ["All", "Withrawal", "Deposit", "Loan", "Investment", "BNPL"];
+  const dateData = ["Today", "Yesterday", "1 Week", "1 Month", "1 Year"];
   return (
     <div className="wallet-table">
       {name === "entries" ? (
@@ -28,13 +31,13 @@ const WalletTable = ({ action, type, userAction, name }) => {
             </div>
             <div className="wallet-filters">
               <div className="wallet-filters-single">
-                <WalletFilter name="Status" />
+                <WalletFilter name="Status" data={statusData} />
               </div>
               <div className="wallet-filters-single">
-                <WalletFilter name="Type" />
+                <WalletFilter name="Type" data={typeData} />
               </div>
               <div className="wallet-filters-single">
-                <WalletFilter name="Date" />
+                <WalletFilter name="Date" data={dateData} />
               </div>
             </div>
           </div>
@@ -89,7 +92,7 @@ const WalletTable = ({ action, type, userAction, name }) => {
             </div>
             <div className="wallet-filter">
               <div className="wallet-filter-singles">
-                <WalletFilter name="View" />
+                <WalletFilter name="View" data={viewData} />
               </div>
               {type !== "more" ? <h2 onClick={action}>Show All</h2> : null}
             </div>

@@ -6,12 +6,14 @@ import WalletFilter from "../walletFilter/walletFilter";
 
 const ReportTable = () => {
   const [search, setSearch] = useState("");
+  const viewData = ["Today", "Yesterday", "1 Week", "1 Month", "1 Year"];
+  const statusData = ["Downloaded", "Draft"];
   return (
     <Table
       action={(e) => {
         setSearch(e.target.value);
       }}
-      title="Reports History"
+      title="Reports"
       tableHead={
         <div className="report-table-head">
           <p>Title</p>
@@ -24,10 +26,10 @@ const ReportTable = () => {
       head={
         <div className="report-filter">
           <div className="report-filter-single">
-            <WalletFilter name="Status" />
+            <WalletFilter name="Status" data={statusData} />
           </div>
           <div className="report-filter-single">
-            <WalletFilter name="View" />
+            <WalletFilter name="View" data={viewData} />
           </div>
         </div>
       }>

@@ -6,7 +6,8 @@ import WalletFilter from "../walletFilter/walletFilter";
 
 const BnplTable = ({ action, type, tableAction }) => {
   const [search, setSearch] = useState("");
-
+  const viewData = ["Today", "Yesterday", "1 Week", "1 Month", "1 Year"];
+  const statusData = ["All", "Ordered", "Active", "Delivered", "Completed"];
   return (
     <Table
       action={(e) => {
@@ -16,10 +17,10 @@ const BnplTable = ({ action, type, tableAction }) => {
         <div className="bnpl-filter">
           <div className="bnpl-filter-singles">
             <div className="bnpl-filter-single">
-              <WalletFilter name="Status" />
+              <WalletFilter name="Status" data={statusData} />
             </div>
             <div className="bnpl-filter-single">
-              <WalletFilter name="View" />
+              <WalletFilter name="View" data={viewData} />
             </div>
           </div>
           {type !== "more" ? <h2 onClick={action}>Show All</h2> : null}

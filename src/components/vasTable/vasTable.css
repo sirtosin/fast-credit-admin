@@ -80,3 +80,14 @@
 .vas-pending span {
   background: #e88200;
 }
+
+.vas-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+.vas-filter-single {
+  width: 48%;
+}
