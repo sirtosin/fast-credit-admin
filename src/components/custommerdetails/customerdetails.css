@@ -1,0 +1,24 @@
+.customerdetails{
+    width: 100%;
+    background: #FFFFFF;
+border-radius: 16px;
+padding: 32px 24px;
+height: 320px;
+overflow: scroll;
+}
+.customerdetails h1{
+margin-bottom: 39px;
+}
+.customerdetails-details{
+  
+    justify-content: space-between;
+}
+.customerdetails-details div p:nth-child(1){
+    color: #4C4D50;
+}
+.customerdetails-details-inner div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}

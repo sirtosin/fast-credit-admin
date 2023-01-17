@@ -1,0 +1,9 @@
+.complaints h1{
+margin-top: 24px;
+margin-bottom: 24px;
+}
+.complaints{
+    padding: 24px;
+    background: #FFFFFF;
+border-radius: 16px;
+}
