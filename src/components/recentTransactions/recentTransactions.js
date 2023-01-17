@@ -1,5 +1,5 @@
-import React from "react";
-import "./recentTransactions.css";
+import React from 'react'
+import './recentTransactions.css'
 
 const RecentTransaction = ({ transactions, page, title }) => {
   return (
@@ -24,14 +24,24 @@ const RecentTransaction = ({ transactions, page, title }) => {
                     <p className="trans-date">{item.date}</p>
                   </div>
                 </div>
-                <p className={item.profit === "loss" ? "trans-loss" : item.profit === "gain" ? "trans-gain" : null}>{item.amount}</p>
+                <p
+                  className={
+                    item.profit === 'loss'
+                      ? 'trans-loss'
+                      : item.profit === 'gain'
+                      ? 'trans-gain'
+                      : null
+                  }
+                >
+                  {item.amount}
+                </p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RecentTransaction;
+export default RecentTransaction

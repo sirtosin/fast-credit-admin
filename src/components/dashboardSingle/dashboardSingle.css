@@ -6,6 +6,10 @@
 }
 
 .dashboard-single-single {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   width: 90%;
   margin: 0px auto;
 }

@@ -1,0 +1,44 @@
+.custOmerTop{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.customerTopChildren{
+    width: 24%;
+}
+
+.customerTopChildren div div div div{
+    /* display: none; */
+}
+.customerTopChildren div div div h2{
+color: black !important;
+}
+.custOmerTop{
+    margin-bottom: 32px;
+}
+.sections section{
+    width: 46%;
+}
+.sections{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.sectionII-top{
+    column-gap: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.sectionI{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 33px;
+}
+.sectipnII{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 33px;
+}
