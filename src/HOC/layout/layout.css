@@ -41,3 +41,19 @@
 .date span {
   color: #029247;
 }
+
+@media screen and (max-width: 650px) {
+  .sidebar-cont {
+    display: block;
+    width: 100%;
+    transition: all 3s ease-in;
+  }
+
+  .sidebar-cont-active {
+    display: none;
+  }
+
+  .layout-cont {
+    width: 100%;
+  }
+}

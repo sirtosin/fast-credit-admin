@@ -28,7 +28,7 @@
 .dashboard-single-head h2 {
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 120%;
   margin-left: 8px;
   color: #1f2024;
@@ -73,4 +73,10 @@
   margin-left: 4px;
   letter-spacing: -0.05em;
   color: #ff3b30;
+}
+
+@media screen and (max-width: 766px) {
+  .dashboard-single-body h2 {
+    font-size: 25px;
+  }
 }

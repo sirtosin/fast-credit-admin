@@ -13,3 +13,15 @@
   margin: 0px auto;
   padding: 100px 0px;
 }
+
+@media screen and (max-width: 871px) {
+  .login-cont {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 623px) {
+  .login-cont {
+    width: 85%;
+  }
+}

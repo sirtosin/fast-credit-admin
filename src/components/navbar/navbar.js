@@ -3,11 +3,13 @@ import "./navbar.css";
 import User from "../../assets/user.png";
 import Search from "../../assets/search.svg";
 import Notification from "../../assets/notification.svg";
+import { FaBars } from "react-icons/fa";
 
-const Navbar = ({ admin }) => {
+const Navbar = ({ admin, action }) => {
   const [search, setSearch] = useState("");
   return (
     <div className="navbar-container">
+      <FaBars onClick={action} className="bars" />
       <div className="navbar-wrapper">
         <div className="navbar-head">
           <h2>Welcome Sloan!</h2>

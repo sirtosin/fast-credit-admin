@@ -12,6 +12,7 @@ import Airtel from "../assets/airtel.png";
 import Dstv from "../assets/dstv.png";
 import Etisalat from "../assets/9mobile.png";
 import Glo from "../assets/glo.png";
+import Logout from "../assets/logout.png";
 
 export const SidebarData = [
   {
@@ -48,6 +49,7 @@ export const SidebarData = [
       { title: "Cards", icon: <Card />, link: "/cards" },
       { title: "Help & Support", icon: <Help />, link: "/help" },
       { title: "Reports", icon: <Help />, link: "/reports" },
+      { title: "Logout", icon: Logout },
     ],
   },
 ];
@@ -83,6 +85,7 @@ export const AdminSidebarData = [
       { title: "Cards", icon: <Card />, link: "/cards" },
       { title: "Help & Support", icon: <Help />, link: "/help" },
       { title: "Reports", icon: <Help />, link: "/reports" },
+      { title: "Logout", icon: Logout },
     ],
   },
 ];

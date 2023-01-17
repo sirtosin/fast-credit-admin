@@ -84,3 +84,19 @@
 .complains::-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (max-width: 450px) {
+  .help-support {
+    margin-bottom: 16px;
+  }
+
+  .complaints-logs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .complaints-logs .days {
+    width: 100%;
+    margin: 16px 0px;
+  }
+}

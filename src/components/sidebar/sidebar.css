@@ -46,6 +46,10 @@
   align-items: center;
 }
 
+.sidebar-single div img {
+  width: 24px;
+}
+
 .sidebar-single p {
   font-style: normal;
   font-weight: 400;
@@ -53,6 +57,11 @@
   line-height: 120%;
   margin-left: 10px;
   color: #1c1d21;
+}
+
+.sidebar-single .logout {
+  color: red;
+  cursor: pointer;
 }
 
 .active .sidebar-single {
@@ -83,4 +92,25 @@
 
 .sidebar-dropdown-cont {
   cursor: pointer;
+}
+
+.close-icon {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .sidebar-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .close-icon {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 35px;
+    cursor: pointer;
+    color: red;
+    margin-top: 8px;
+  }
 }

@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./sidebar.css";
 import Logo from "../../assets/logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Dropdown from "../../assets/dropdown.svg";
 import Dropup from "../../assets/dropup.svg";
 import { SidebarData } from "../../data/data";
 import { AdminSidebarData } from "../../data/data";
+import { FaTimes } from "react-icons/fa";
 
-const Sidebar = ({ admin }) => {
+const Sidebar = ({ admin, showSubnav }) => {
+  const navigate = useNavigate();
   const [manage, setManage] = useState(false);
   const [loan, setLoan] = useState(false);
   const [sidebar, setSidebar] = useState([]);
@@ -20,6 +22,9 @@ const Sidebar = ({ admin }) => {
   }, [admin]);
   return (
     <div className="sidebar-container">
+      <div className="close-icon" onClick={showSubnav}>
+        <FaTimes />
+      </div>
       <img src={Logo} alt="logo" />
       <div className="sidebar-wrapper">
         {sidebar?.map((items, index) => {
@@ -60,6 +65,19 @@ const Sidebar = ({ admin }) => {
                                 <img src={Dropdown} alt="logo" />
                               ) : null
                             ) : null}
+                          </div>
+                        </div>
+                      ) : item.title === "Logout" ? (
+                        <div className="sidebar-single">
+                          <div>
+                            <img src={item.icon} alt="logout" />
+                            <p
+                              className="logout"
+                              onClick={() => {
+                                navigate("/");
+                              }}>
+                              Logout
+                            </p>
                           </div>
                         </div>
                       ) : (

@@ -45,3 +45,16 @@
   letter-spacing: -0.05em;
   color: #98989a;
 }
+
+@media screen and (max-width: 450px) {
+  .dashboard-category {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .dashboard-category .days {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
