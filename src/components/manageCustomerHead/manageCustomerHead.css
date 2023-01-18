@@ -1,0 +1,10 @@
+.manage-customer-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.manage-customer-single {
+  width: 24%;
+}

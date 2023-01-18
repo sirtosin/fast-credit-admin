@@ -1,0 +1,45 @@
+.manage-customer-table,
+.manage-customer-table-body {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.manage-customer-table p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: -0.05em;
+  color: #98989a;
+  width: 20%;
+}
+
+.manage-customer-table-body {
+  border-top: 1px solid #e8eaed;
+  position: relative;
+  cursor: pointer;
+}
+
+.manage-customer-table-body p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  padding: 27px 0px;
+  letter-spacing: -0.05em;
+  color: #1f2024;
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.manage-customer-table p:first-child,
+.manage-customer-table-body p:first-child {
+  width: 30%;
+}
+
+.manage-customer-table-body span {
+  margin-right: 24px;
+}

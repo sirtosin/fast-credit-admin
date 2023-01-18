@@ -6,7 +6,7 @@
 }
 
 .user-wallet-cont {
-  width: 93%;
+  width: 96%;
   margin: 0px auto;
   display: flex;
   justify-content: space-between;
@@ -37,8 +37,8 @@
   top: 0px;
 }
 
-.user-wallet-name > div {
-  margin-left: 32px;
+.user-wallet-name > .user-wallet-details {
+  margin-left: 30px;
 }
 
 .user-wallet-name > div div {
@@ -112,6 +112,17 @@
   border-radius: 24px;
   padding: 8px 16px;
   margin-top: 40px;
+}
+
+.user-wallet-status a {
+  margin-top: 60px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 120%;
+  display: block;
+  letter-spacing: -0.05em;
+  color: #014924;
 }
 
 .user-wallet-approved {

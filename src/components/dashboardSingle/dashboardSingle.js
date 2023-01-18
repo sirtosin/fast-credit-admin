@@ -1,70 +1,30 @@
-import React from 'react'
-import './dashboardSingle.css'
-import Gain from '../../assets/gain.svg'
-import Loss from '../../assets/loss.svg'
+import React from "react";
+import "./dashboardSingle.css";
+import Gain from "../../assets/gain.svg";
+import Loss from "../../assets/loss.svg";
 
-const DashboardSingle = ({
-  img,
-  title,
-  amount,
-  profit,
-  profitAmount,
-  page,
-  svg,
-}) => {
+const DashboardSingle = ({ img, title, amount, profit, profitAmount, page, svg }) => {
   return (
     <div className="dashboard-single-container">
       <div className="dashboard-single-single">
         <div className="dashboard-single-head">
           <div>
-            {svg === 'present' ? (
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="36" height="36" rx="18" fill="#029247" />
-                <path
-                  d="M18 25.1654C17.5333 25.1654 17.06 24.9854 16.7067 24.632L15.5667 23.5054C15.2867 23.2254 14.9 23.072 14.5067 23.072H14C12.62 23.072 11.5 21.9587 11.5 20.592V13.312C11.5 11.9454 12.62 10.832 14 10.832H22C23.38 10.832 24.5 11.9454 24.5 13.312V20.5854C24.5 21.952 23.38 23.0654 22 23.0654H21.4933C21.1 23.0654 20.7134 23.2254 20.4333 23.4987L19.2933 24.6254C18.94 24.9854 18.4667 25.1654 18 25.1654ZM14 11.832C13.1733 11.832 12.5 12.4987 12.5 13.312V20.5854C12.5 21.4054 13.1733 22.0654 14 22.0654H14.5067C15.1667 22.0654 15.8066 22.332 16.2733 22.792L17.4133 23.9187C17.74 24.2387 18.2667 24.2387 18.5933 23.9187L19.7333 22.792C20.2 22.332 20.84 22.0654 21.5 22.0654H22C22.8267 22.0654 23.5 21.3987 23.5 20.5854V13.312C23.5 12.492 22.8267 11.832 22 11.832H14Z"
-                  fill="white"
-                />
-                <path
-                  d="M18.0464 16.4672C18.0331 16.4672 18.013 16.4672 17.9997 16.4672C17.9797 16.4672 17.9531 16.4672 17.9331 16.4672C16.9597 16.4339 16.1997 15.6472 16.1997 14.6672C16.1997 13.6739 17.0064 12.8672 17.9997 12.8672C18.993 12.8672 19.7997 13.6739 19.7997 14.6672C19.7931 15.6472 19.0331 16.4339 18.0597 16.4672C18.0597 16.4672 18.0531 16.4672 18.0464 16.4672ZM17.9997 13.8672C17.5597 13.8672 17.1997 14.2272 17.1997 14.6672C17.1997 15.1005 17.5397 15.4539 17.9664 15.4672C17.9664 15.4605 18.0064 15.4605 18.0531 15.4672C18.4731 15.4405 18.7997 15.0939 18.7997 14.6672C18.7997 14.2272 18.4397 13.8672 17.9997 13.8672Z"
-                  fill="white"
-                />
-                <path
-                  d="M18 21.1321C17.24 21.1321 16.48 20.9321 15.8867 20.5387C15.3267 20.1654 15 19.6254 15 19.0521C15 18.4787 15.32 17.9321 15.8867 17.5587C17.0733 16.7721 18.9266 16.7721 20.1066 17.5587C20.6666 17.9321 20.9933 18.4787 20.9933 19.0454C20.9933 19.6187 20.6733 20.1587 20.1066 20.5387C19.52 20.9387 18.76 21.1321 18 21.1321ZM16.44 18.3921C16.1533 18.5854 16 18.8187 16 19.0521C16 19.2854 16.16 19.5187 16.44 19.7121C17.2866 20.2787 18.7067 20.2787 19.5533 19.7121C19.84 19.5187 20 19.2854 19.9933 19.0521C19.9933 18.8187 19.8333 18.5854 19.5533 18.3921C18.7133 17.8254 17.2866 17.8254 16.44 18.3921Z"
-                  fill="white"
-                />
-              </svg>
-            ) : (
-              <img src={img} alt="Icon" />
-            )}
+            <img src={img} alt="Icon" />
           </div>
           <h2>{title}</h2>
         </div>
         <div className="dashboard-single-body">
           <h2 className="amount">{amount}</h2>
-          {page === 'dashboard' ? (
-            <div
-              className={
-                profit === 'gain' ? 'gain' : profit === 'loss' ? 'loss' : null
-              }
-            >
-              {profit === 'gain' ? (
-                <img src={Gain} alt="gain" />
-              ) : profit === 'loss' ? (
-                <img src={Loss} alt="loss" />
-              ) : null}
+          {page === "dashboard" ? (
+            <div className={profit === "gain" ? "gain" : profit === "loss" ? "loss" : null}>
+              {profit === "gain" ? <img src={Gain} alt="gain" /> : profit === "loss" ? <img src={Loss} alt="loss" /> : null}
               <p>{profitAmount}</p>
             </div>
           ) : null}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardSingle
+export default DashboardSingle;

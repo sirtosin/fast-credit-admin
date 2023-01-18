@@ -1,8 +1,9 @@
 import React from "react";
 import "./userWalletSingle.css";
 import Star from "../../assets/star.svg";
+import { NavLink } from "react-router-dom";
 
-const UserWalletSingle = ({ name, date, img, status, type, investment, rate, loanStatus }) => {
+const UserWalletSingle = ({ name, date, img, status, type, investment, rate, loanStatus, single }) => {
   return (
     <div className="user-wallet-single">
       <div className="user-wallet-cont">
@@ -11,7 +12,7 @@ const UserWalletSingle = ({ name, date, img, status, type, investment, rate, loa
             <img src={img} alt="user" className="user-img" />
             <img src={Star} alt="star" className="star" />
           </div>
-          <div>
+          <div className="user-wallet-details">
             <h2>{name}</h2>
             {type === "cards" ? (
               <p>{date}</p>
@@ -55,6 +56,8 @@ const UserWalletSingle = ({ name, date, img, status, type, investment, rate, loa
               }>
               {loanStatus}
             </h2>
+          ) : single === "customers" ? (
+            <NavLink>Edit Profile</NavLink>
           ) : null}
         </div>
       </div>

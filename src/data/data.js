@@ -608,3 +608,42 @@ export const VAS = [
     date: "28 September 2022 | 04:20 pm",
   },
 ];
+
+export const customers = [
+  {
+    name: "Bolaji Oladele",
+    email: "bolajiladele@gmail",
+    phone: "07050395563",
+    date: "10 - 11 - 2022",
+  },
+  {
+    name: "Adewunmi Emmanuel",
+    email: "bolajiladele@gmail",
+    phone: "07050395563",
+    date: "10 - 11 - 2022",
+  },
+  {
+    name: "Olalekan Peter",
+    email: "bolajiladele@gmail",
+    phone: "07050395563",
+    date: "10 - 11 - 2022",
+  },
+  {
+    name: "Bamidele Olawale",
+    email: "bolajiladele@gmail",
+    phone: "07050395563",
+    date: "10 - 11 - 2022",
+  },
+  {
+    name: "Bolaji Oladele",
+    email: "bolajiladele@gmail",
+    phone: "07050395563",
+    date: "10 - 11 - 2022",
+  },
+  {
+    name: "Bolaji Oladele",
+    email: "bolajiladele@gmail",
+    phone: "07050395563",
+    date: "10 - 11 - 2022",
+  },
+];
