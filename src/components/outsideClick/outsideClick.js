@@ -1,25 +1,25 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
 const OutsideClick = ({ children, onClickOutside }) => {
-    const ref = useRef(null);
+  const ref = useRef(null);
 
-    const handleClickOutside = (e) => {
-        if (ref.current && !ref.current.contains(e.target)) {
-            onClickOutside && onClickOutside();
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener('click', handleClickOutside, true);
-        return () => {
-            document.removeEventListener('click', handleClickOutside, true);
-        };
-    }, []);
-
-    if (!children) {
-        return null;
+  const handleClickOutside = (e) => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      onClickOutside && onClickOutside();
     }
-    return <div ref={ref}>{children}</div>;
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  });
+
+  if (!children) {
+    return null;
+  }
+  return <div ref={ref}>{children}</div>;
 };
 
 export default OutsideClick;

@@ -170,6 +170,8 @@ const SingleHelp = () => {
                   {complainLog?.map((item, index) => {
                     if (item.title === complain) {
                       return <p key={index}>{item.complain}</p>;
+                    } else {
+                      return null;
                     }
                   })}
                   <div className="complain-img-cont">
