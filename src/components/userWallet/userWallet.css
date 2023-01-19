@@ -22,3 +22,37 @@
 .user-wallet-start {
   width: 49%;
 }
+
+@media screen and (max-width: 600px) {
+  .user-wallet-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .user-wallet-group,
+  .user-wallet-wrapper,
+  .user-wallet-wrappers,
+  .user-wallet-start {
+    width: 100%;
+  }
+
+  .user-wallet-wrapper,
+  .user-wallet-wrappers {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .user-wallet-wrapper {
+    flex-direction: column;
+  }
+
+  .user-wallet-total {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .user-wallet-total:first-child {
+    margin-top: 0px;
+  }
+}

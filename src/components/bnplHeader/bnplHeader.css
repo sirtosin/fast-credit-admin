@@ -7,3 +7,18 @@
 .bnpl-header-single {
   width: 23%;
 }
+
+@media screen and (max-width: 600px) {
+  .bnpl-header {
+    flex-direction: column;
+  }
+
+  .bnpl-header-single {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .bnpl-header-single:first-child {
+    margin-top: 0px;
+  }
+}

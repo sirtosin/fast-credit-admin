@@ -24,7 +24,11 @@ const HealthLoans = () => {
 
       case 1:
         return (
-          <Layout text="Back to Loans">
+          <Layout
+            text="Back to Loans"
+            action={() => {
+              setCount(count - 1);
+            }}>
             <UserLoans />
           </Layout>
         );

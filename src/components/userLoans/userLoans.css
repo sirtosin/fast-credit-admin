@@ -63,3 +63,37 @@
 .loans-apply-btns div {
   width: 47%;
 }
+
+@media screen and (max-width: 600px) {
+  .user-health-header {
+    flex-direction: column;
+  }
+
+  .user-health-single,
+  .user-health-group,
+  .user-health-app,
+  .user-health-manage {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .user-health-group {
+    margin-top: 20px;
+  }
+
+  .user-health-body {
+    flex-direction: column;
+  }
+
+  .loans-apply-btns {
+    flex-direction: column;
+  }
+
+  .loans-apply-btns div {
+    width: 100%;
+  }
+
+  .loans-apply-btns div:last-child {
+    margin-top: 20px;
+  }
+}

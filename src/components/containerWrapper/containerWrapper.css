@@ -9,3 +9,9 @@
   width: 91%;
   margin: 0px auto;
 }
+
+@media screen and (max-width: 600pc) {
+  .container-wrapper {
+    width: 100%;
+  }
+}

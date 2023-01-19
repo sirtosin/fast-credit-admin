@@ -7,3 +7,18 @@
 .header-single {
   width: 18%;
 }
+
+@media screen and (max-width: 600px) {
+  .help-header {
+    flex-direction: column;
+  }
+
+  .header-single {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .header-single:first-child {
+    margin-top: 0px;
+  }
+}

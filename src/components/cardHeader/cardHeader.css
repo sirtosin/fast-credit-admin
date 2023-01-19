@@ -37,3 +37,33 @@
   letter-spacing: -0.05em;
   color: #1c1d21;
 }
+
+@media screen and (max-width: 600px) {
+  .card-header-container {
+    flex-direction: column;
+  }
+
+  .card-header-wrapper,
+  .card-manage {
+    width: 100%;
+  }
+
+  .card-manage {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card-header-wrapper {
+    flex-direction: column;
+  }
+
+  .card-header-single {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .card-header-single:first-child {
+    margin-top: 0px;
+  }
+}

@@ -66,3 +66,37 @@
 .card-management div span {
   margin-right: 16px;
 }
+
+@media screen and (max-width: 600px) {
+  .user-card-header,
+  .user-card-body {
+    flex-direction: column;
+  }
+
+  .user-card-group,
+  .user-management,
+  .user-transactions,
+  .user-card-wrapper {
+    width: 100%;
+  }
+
+  .user-card-wrapper,
+  .user-management {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .user-card-wrapper {
+    flex-direction: column;
+  }
+
+  .user-card-total {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .user-card-total:first-child {
+    margin-top: 0px;
+  }
+}

@@ -65,3 +65,12 @@
 .popup-header img {
   cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+  .popup-cont {
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    max-width: 100%;
+  }
+}

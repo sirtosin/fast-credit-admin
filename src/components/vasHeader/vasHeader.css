@@ -7,3 +7,18 @@
 .single-vas-header {
   width: 32%;
 }
+
+@media screen and (max-width: 600px) {
+  .vas-header {
+    flex-direction: column;
+  }
+
+  .single-vas-header {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .single-vas-header:first-child {
+    margin-top: 0px;
+  }
+}

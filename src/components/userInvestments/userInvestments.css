@@ -60,3 +60,23 @@
 .user-investment-manage {
   width: 49%;
 }
+
+@media screen and (max-width: 600px) {
+  .user-investments-header,
+  .user-investments-body {
+    flex-direction: column;
+  }
+
+  .user-investment-group,
+  .top-gain,
+  .user-investment-details,
+  .user-investment-manage {
+    width: 100%;
+  }
+
+  .top-gain,
+  .user-investment-group,
+  .user-investment-details {
+    margin-bottom: 20px;
+  }
+}

@@ -7,3 +7,18 @@
 .health-single {
   width: 18%;
 }
+
+@media screen and (max-width: 600px) {
+  .health-header {
+    flex-direction: column;
+  }
+
+  .health-single {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .health-single:first-child {
+    margin-top: 0px;
+  }
+}

@@ -45,3 +45,11 @@
   letter-spacing: -0.05em;
   color: #ffffff;
 }
+
+@media screen and (max-width: 400px) {
+  .reports-head-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: unset;
+  }
+}

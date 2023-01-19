@@ -98,3 +98,31 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 600px) {
+  .user-vas-body {
+    flex-direction: column;
+  }
+
+  .user-vas-purchase,
+  .user-vas-wrapper {
+    width: 100%;
+  }
+
+  .user-vas-wrapper {
+    margin-top: 20px;
+  }
+
+  .approve-body p:first-child {
+    width: 50%;
+  }
+
+  .approve-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .approve-buttons div:first-child {
+    margin-bottom: 10px;
+  }
+}

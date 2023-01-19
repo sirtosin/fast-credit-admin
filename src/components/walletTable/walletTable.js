@@ -112,10 +112,10 @@ const WalletTable = ({ action, type, userAction, name }) => {
               return (
                 <div className="wallet-wrapper" key={index} onClick={userAction}>
                   <img src={User} alt="user" />
-                  <p>{items.name}</p>
-                  <p>{items.mail}</p>
-                  <p>{items.phone}</p>
-                  <p>{items.date}</p>
+                  <p datatype="Name">{items.name}</p>
+                  <p datatype="Email">{items.mail}</p>
+                  <p datatype="Phone">{items.phone}</p>
+                  <p datatype="Date">{items.date}</p>
                 </div>
               );
             })}

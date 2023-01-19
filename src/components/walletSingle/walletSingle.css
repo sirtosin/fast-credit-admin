@@ -87,3 +87,14 @@
   letter-spacing: -0.05em;
   color: #ff3b30;
 }
+
+@media screen and (max-width: 600px) {
+  .wallet-single {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .wallet-single:first-child {
+    margin-top: 0px;
+  }
+}

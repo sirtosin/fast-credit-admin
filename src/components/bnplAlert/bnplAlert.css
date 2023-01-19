@@ -82,3 +82,17 @@
   letter-spacing: -0.05em;
   color: #ffffff;
 }
+
+@media screen and (max-width: 600px) {
+  .order-buttons {
+    flex-direction: column;
+  }
+
+  .order-buttons button {
+    width: 100%;
+  }
+
+  .order-buttons button:first-child {
+    margin-bottom: 20px;
+  }
+}

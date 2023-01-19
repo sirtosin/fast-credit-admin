@@ -106,3 +106,19 @@
 .credit-transactions-single:last-child {
   border-bottom: 0px;
 }
+
+@media screen and (max-width: 600px) {
+  .credit-card-container {
+    width: 100%;
+  }
+
+  .credit-card-img {
+    margin-left: 0px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .credit-card-img img {
+    width: 50%;
+  }
+}

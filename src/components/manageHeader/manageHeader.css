@@ -8,3 +8,20 @@
 .manage-head-cont {
   width: 48%;
 }
+
+@media screen and (max-width: 600px) {
+  .manage-header-cont {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .manage-header-cont {
+    flex-direction: column;
+  }
+
+  .manage-head-cont {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
