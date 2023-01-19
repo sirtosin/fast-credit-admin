@@ -91,3 +91,20 @@
 .vas-filter-single {
   width: 48%;
 }
+
+@media screen and (max-width: 600px) {
+  .vas-table,
+  .vas-table-body {
+    display: none;
+  }
+
+  .vas-filter {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .vas-filter-single {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

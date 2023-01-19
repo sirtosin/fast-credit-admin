@@ -74,6 +74,48 @@ const BnplTable = ({ action, type, tableAction }) => {
           </div>
         );
       })}
+      <table class="table">
+        <tbody>
+          {Orders?.filter((item) => {
+            if (search === "") {
+              return item;
+            } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else if (item.mail.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else {
+              return null;
+            }
+          })?.map((items, index) => {
+            return (
+              <tr key={index} onClick={tableAction}>
+                <td data-label="Name">{items.name}</td>
+                <td data-label="Vendor">{items.vendor}</td>
+                <td data-label="Price">{items.price}</td>
+                <td data-label="Installment Plan">{items.installment}</td>
+                <td data-label="Order Date">{items.date}</td>
+                <td data-label="Interest">{items.interest}</td>
+                <td
+                  data-label="Status"
+                  className={
+                    items.status === "Active"
+                      ? "bnpl-active"
+                      : items.status === "Ordered"
+                      ? "bnpl-ordered"
+                      : items.status === "Delivered"
+                      ? "bnpl-deliver"
+                      : items.status === "Complete"
+                      ? "bnpl-complete"
+                      : null
+                  }>
+                  <span>{items.status}</span>
+                </td>
+                <td data-label="Reference No.">{items.ref}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </Table>
   );
 };

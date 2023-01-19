@@ -53,6 +53,36 @@ const HelpTable = ({ tableAction, type, action }) => {
           </div>
         );
       })}
+      <table class="table">
+        <tbody>
+          {Transactions?.filter((item) => {
+            if (search === "") {
+              return item;
+            } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else if (item.mail.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else {
+              return null;
+            }
+          })?.map((items, index) => {
+            return (
+              <tr key={index} onClick={tableAction}>
+                <td data-label="Customer">{items.name}</td>
+                <td data-label="Complain Subject">{items.subject}</td>
+                <td data-label="Ticket Number">{items.ticket}</td>
+                <td data-label="Mobile Number">{items.phone}</td>
+                <td
+                  data-label="Status"
+                  className={items.status === "Failed" ? "help-fail" : items.status === "Pending" ? "help-pending" : items.status === "Completed" ? "help-complete" : null}>
+                  <span>{items.status}</span>
+                </td>
+                <td data-label="Date | Time">{items.date}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </Table>
   );
 };

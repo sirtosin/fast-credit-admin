@@ -110,7 +110,7 @@
   color: #029247;
 }
 
-.wallet-table-body {
+.wallet-table-bodys {
   margin-top: 48px;
 }
 
@@ -205,6 +205,12 @@
   color: #ffffff;
 }
 
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .wallet-table-head {
     flex-direction: column;
@@ -221,25 +227,16 @@
     margin-top: 20px;
   }
 
-  /* .wallet-wrapper {
-    display: block;
+  .wallet-table-bodys {
+    display: none;
   }
 
-  .wallet-wrapper p::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 15px;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: left;
+  .wallet-filters {
+    flex-direction: column;
   }
 
-  .wallet-wrapper p {
-    text-align: left;
-    position: relative;
-    display: block;
+  .wallet-filters-single {
     width: 100%;
-  } */
+    margin-bottom: 20px;
+  }
 }

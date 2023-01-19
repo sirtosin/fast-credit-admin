@@ -111,3 +111,19 @@
 .manage-dropdown h6:last-child {
   border: 0px;
 }
+
+@media screen and (max-width: 600px) {
+  .manage-table,
+  .manage-table-body {
+    display: none;
+  }
+
+  .manage-table-add {
+    width: 100%;
+  }
+
+  .manage-table-add button {
+    width: 100%;
+    margin: 20px 0px;
+  }
+}

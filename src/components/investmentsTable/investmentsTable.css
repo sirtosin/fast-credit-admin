@@ -78,3 +78,27 @@
 .investments-complete span {
   background: #029247;
 }
+
+@media screen and (max-width: 600px) {
+  .investments-table,
+  .investments-table-body {
+    display: none;
+  }
+
+  .investments-filter {
+    width: 100%;
+    margin: 20px 0px;
+  }
+
+  .investments-active span,
+  .investments-complete span {
+    border-radius: 24px;
+    padding: 4px 8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+  }
+}

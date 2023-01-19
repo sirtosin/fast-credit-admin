@@ -79,6 +79,50 @@ const LoansTable = ({ tableAction }) => {
             </div>
           );
         })}
+      <table class="table">
+        <tbody>
+          {healthLoans
+            ?.filter((item) => {
+              if (search === "") {
+                return item;
+              } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+                return item;
+              } else {
+                return null;
+              }
+            })
+            ?.map((items, index) => {
+              return (
+                <tr key={index} onClick={tableAction}>
+                  <td data-label="Name">{items.name}</td>
+                  <td data-label="Loan Amount">{items.amount}</td>
+                  <td data-label="Repayment">{items.repay}</td>
+                  <td data-label="DTI">{items.Dti}</td>
+                  <td data-label="Date Created">{items.date}</td>
+                  <td data-label="Tenure">{items.tenure}</td>
+                  <td
+                    data-label="Status"
+                    className={
+                      items.status === "Requested"
+                        ? "health-request"
+                        : items.status === "Paid"
+                        ? "health-paid"
+                        : items.status === "Pending"
+                        ? "health-pending"
+                        : items.status === "Failed"
+                        ? "health-failed"
+                        : items.status === "Approved"
+                        ? "health-approve"
+                        : null
+                    }>
+                    <span>{items.status}</span>
+                  </td>
+                  <td data-label="Reference No.">{items.ref}</td>
+                </tr>
+              );
+            })}
+        </tbody>
+      </table>
     </Table>
   );
 };

@@ -95,6 +95,32 @@ const ManageTable = ({ action }) => {
           </div>
         );
       })}
+      <table class="table">
+        <tbody>
+          {Admin?.filter((item) => {
+            if (search === "") {
+              return item;
+            } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else if (item.mail.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else {
+              return null;
+            }
+          })?.map((items, index) => {
+            return (
+              <tr key={index}>
+                <td data-label="Name">{items.name}</td>
+                <td data-label="Status" className={items.status === "Active" ? "manage-admin-active" : items.status === "Suspended" ? "manage-admin-suspended" : null}>
+                  <span>{items.status}</span>
+                </td>
+                <td data-label="Email">{items.mail}</td>
+                <td data-label="Phone">{items.phone}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
       {popup ? (
         <Popup
           title="Auto Select"

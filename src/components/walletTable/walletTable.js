@@ -41,7 +41,7 @@ const WalletTable = ({ action, type, userAction, name }) => {
               </div>
             </div>
           </div>
-          <div className="wallet-table-body">
+          <div className="wallet-table-bodys">
             <div className="wallet-wrappers-header">
               <p>Name</p>
               <p>Amount</p>
@@ -97,7 +97,7 @@ const WalletTable = ({ action, type, userAction, name }) => {
               {type !== "more" ? <h2 onClick={action}>Show All</h2> : null}
             </div>
           </div>
-          <div className="wallet-table-body">
+          <div className="wallet-table-bodys">
             {Customers?.filter((item) => {
               if (search === "") {
                 return item;
@@ -121,6 +121,61 @@ const WalletTable = ({ action, type, userAction, name }) => {
             })}
           </div>
         </div>
+      )}
+      {name === "entries" ? (
+        <table class="table">
+          <tbody>
+            {Entries?.filter((item) => {
+              if (search === "") {
+                return item;
+              } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+                return item;
+              } else if (item.mail.toLowerCase().includes(search.toLowerCase())) {
+                return item;
+              } else {
+                return null;
+              }
+            })?.map((items, index) => {
+              return (
+                <tr key={index}>
+                  <td data-label="Name">{items.name}</td>
+                  <td data-label="Amount">{items.amount}</td>
+                  <td data-label="Date">{items.date}</td>
+                  <td data-label="Type">{items.type}</td>
+                  <td data-label="Status" className={items.status === "Successful" ? "wallet-success" : "wallet-failure"}>
+                    <span>{items.status}</span>
+                  </td>
+                  <td data-label="Reference No.">{items.ref}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <table class="table">
+          <tbody>
+            {Customers?.filter((item) => {
+              if (search === "") {
+                return item;
+              } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+                return item;
+              } else if (item.mail.toLowerCase().includes(search.toLowerCase())) {
+                return item;
+              } else {
+                return null;
+              }
+            })?.map((items, index) => {
+              return (
+                <tr key={index} onClick={userAction}>
+                  <td data-label="Name">{items.name}</td>
+                  <td data-label="Email">{items.mail}</td>
+                  <td data-label="Phone">{items.phone}</td>
+                  <td data-label="Date">{items.date}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       )}
     </div>
   );

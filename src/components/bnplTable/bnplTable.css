@@ -100,3 +100,20 @@
   letter-spacing: -0.05em;
   color: #029247;
 }
+
+@media screen and (max-width: 600px) {
+  .bnpl-table,
+  .bnpl-table-body {
+    display: none;
+  }
+
+  .bnpl-filter {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .bnpl-filter-singles {
+    width: 100%;
+    margin: 20px 0px;
+  }
+}

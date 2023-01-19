@@ -62,6 +62,37 @@ const InvestmentsTable = ({ action }) => {
           </div>
         );
       })}
+      <table class="table">
+        <tbody>
+          {Investment?.filter((item) => {
+            if (search === "") {
+              return item;
+            } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else if (item.mail.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else {
+              return null;
+            }
+          })?.map((items, index) => {
+            return (
+              <tr key={index} onClick={action}>
+                <td data-label="Name">{items.name}</td>
+                <td data-label="Amount">{items.amount}</td>
+                <td data-label="Yield Amount">{items.yield}</td>
+                <td data-label="% Growth">{items.growth}</td>
+                <td data-label="Investment Rate">{items.rate}</td>
+                <td data-label="Tenure">{items.tenure}</td>
+                <td data-label="Type">{items.type}</td>
+                <td data-label="Status" className={items.status === "Active" ? "investments-active" : items.status === "Complete" ? "investments-complete" : null}>
+                  <span>{items.status}</span>
+                </td>
+                <td data-label="Reference No.">{items.ref}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </Table>
   );
 };

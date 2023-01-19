@@ -63,6 +63,37 @@ const VasTable = ({ action }) => {
           </div>
         );
       })}
+      <table class="table">
+        <tbody>
+          {VAS?.filter((item) => {
+            if (search === "") {
+              return item;
+            } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else if (item.mail.toLowerCase().includes(search.toLowerCase())) {
+              return item;
+            } else {
+              return null;
+            }
+          })?.map((items, index) => {
+            return (
+              <tr key={index} onClick={action}>
+                <td data-label="User">{items.name}</td>
+                <td data-label="Amount">{items.amount}</td>
+                <td data-label="Network">{items.network}</td>
+                <td data-label="Type">{items.type}</td>
+                <td data-label="Mobile Number">{items.phone}</td>
+                <td
+                  data-label="Status"
+                  className={items.status === "Completed" ? "vas-complete" : items.status === "Pending" ? "vas-pending" : items.status === "Failed" ? "vas-failed" : null}>
+                  <span>{items.status}</span>
+                </td>
+                <td data-label="Date | Time">{items.date}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </Table>
   );
 };

@@ -45,6 +45,30 @@ const ManageCustomerTable = ({ action }) => {
             </div>
           );
         })}
+      <table class="table">
+        <tbody>
+          {customers
+            ?.filter((item) => {
+              if (search === "") {
+                return item;
+              } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+                return item;
+              } else {
+                return null;
+              }
+            })
+            ?.map((items, index) => {
+              return (
+                <tr key={index} onClick={action}>
+                  <td data-label="Name">{items.name}</td>
+                  <td data-label="Email">{items.email}</td>
+                  <td data-label="Phone">{items.phone}</td>
+                  <td data-label="Date Joined">{items.date}</td>
+                </tr>
+              );
+            })}
+        </tbody>
+      </table>
     </Table>
   );
 };

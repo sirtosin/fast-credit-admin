@@ -43,3 +43,10 @@
 .manage-customer-table-body span {
   margin-right: 24px;
 }
+
+@media screen and (max-width: 600px) {
+  .manage-customer-table,
+  .manage-customer-table-body {
+    display: none;
+  }
+}
